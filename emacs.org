@@ -10,7 +10,7 @@
     - http://www.fidding.me/article/16 这个文档里面写的很详细
 
 ** org-mode
-参考网站  [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-mode入门教程]] [[https://github.com/tshwangq/awesome-smoking][用org mode 实践戒烟]]  [[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-9][Org-mode 简明手册]] [[https://github.com/marboo/orgmode-cn][Emacs的Org Mode – 用纯文本书写人生]] [[https://github.com/marboo/orgmode-cn/blob/master/org.org][Org-Manual 7.8]]
+参考网站  [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-mode入门教程]] [[https://github.com/tshwangq/awesome-smoking][用org mode 实践戒烟]]  [[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-9][Org-mode 简明手册]] [[https://github.com/marboo/orgmode-cn][Emacs的Org Mode – 用纯文本书写人生]] [[https://github.com/marboo/orgmode-cn/blob/master/org.org][Org-Manual 7.8]] [[http://holbrook.github.io/2012/04/12/emacs_orgmode_editor.html][org-mode，最好的文档编辑利器]]
 
 *** org-table
    - 构造表头: |Name|Phone|Age 然后紧接着输入 C-c <RET>.
@@ -29,10 +29,39 @@
    - \[[file:/home/maple/图片/test.jpg][a picture]\]
    - \[[file:/home/maple/图片/test.jpg]\] 然后C-c C-x C-v 显示
 *** org-tudo
-   - C-c C-t 改变当前标签的状态
-   - C-u C-c C-t 选择当前标签的状态
-   - C-c / t  在一个sparse tree中查看TODO事项.
-   - C-u C-c / t 搜索指定的TODO状态
-
+   - =C-c C-t= 改变当前标签的状态
+   - =C-u C-c C-t= 选择当前标签的状态
+   - =S-<right> / S-<left>=  循环选择下一个/上一个TODO状态
+   - =C-c / t=  在一个sparse tree中查看TODO事项.
+   - =C-u C-c / t= 搜索指定的TODO状态
+   - =C-TAB= 同级* =M-TAB= 同级子标签 - 1) 等
+   - =C-c C-c= 改变 checkbox状态
+   - =C-c ,= 设置优先级（方括号里的ABC）
+   - =M-S-RET= 插入同级TODO标签
+   - =C-c C-q=  为标题添加标签
+   - =C-c / m= 生成带标签的树
+   - =C-c .= 出现日历 可插入时间
+   - =C-c C-d= deadline
+   - =C-c C-s= starttime
+   - =C-c C-c= 改变 checkbox状态
+   - 插入`[/ ]`或`[% ]` 可统计子标签的完成度
+   - =C-c a= 进入agenda view
+   - 更改todo关键字
+     1) (setq org-todo-keywords '((sequence "TODO" "FEEDBACK" "VERIFY" "|" "DONE" "DELEGATED")))
+     2) 这个`|`竖线划分了哪些状态是属于未完结状态,哪些状态是出于已完结状态. 如果你没有提供分隔线,那么最后那个状态被认为是已完结状态.
+     3) 命令`C-c C-t`切换状态时,会先从TODO切换到FEEDBACK,然后是FEEDBACK,最后是DONE和DELEGATED状态. 你也可以使用数字前缀来快速选择特定的状态,例如`C-3 C-c C–t`会使得状态立即编程VERIFY. 你也可以使用`S-<left>`来在这个序列中回退状态.
+     4) (setq org-todo-keywords '((type "Fred" "Sara" "Lucy" "|" "DONE")))
+     5) 它们被用来标示不同的类型  它也支持使用命令`C-c C-t`[
+   - 对当前任务记时
+     1) =C-c C-x C-i= (org-clock-in) 开始对当前任务计时
+     2) =C-c C-x C-o= (org-clock-out) 结束计时. 
+   - 习惯标签
+     1) <2017-10-17 Sat .+2d/4d> 格式如下 在星期后面加入东西
+     2) `.+时间间隔`用来表示两次重复之间的间隔
+     3) `++时间间隔`表示该习惯有时间上的约束(比如,必须在周末完成)
+     4) `+时间间隔`则表示改习惯不是一个经常性的事项,它可以在之前积压未办之事,然后在未来补完它(比如补写周报)
+     5) 改习惯也可以使用类似`.+2d/3d`这样的符号标示最小/最大的间隔时间. `.+2d/3d`的意思是,你希望至少每三天做一次这个工作,但是最多每两天做一次这个工作
+     6) 蓝色：表示当天任务没有完成；绿色：表示当天任务已经完成；黄色：表示任务在第二天就会过期了；红色：表示工作在当天已经延误了。
+     7) DEADLINE: <2005-10-01 Sat +1m -3d>. +1m就是repeater. 意思是每个月重复一次. 如果你需要在一个DEADLINE中同时表明repeater和指定预警期的话,则repeater需要放在前面,预警期放在后面
 
 
