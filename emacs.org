@@ -2,12 +2,37 @@
 神一样的编辑器
 参考web：[[https://github.com/emacs-china/hello-emacs][emacs新手入门资料汇集地]]
 
+
+
 ** magit
     - 添加文件 先创建并修改 然后在magit-status 里面按s键 加入track
     - 提交 使用命令magit-status后加入注释后要按C-c C-c 结束注释 然后才添加完成
     - http://www.fidding.me/article/16 这个文档里面写的很详细
 
 ** org-mode
-参考网站  [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-mode入门教程]] [[https://github.com/tshwangq/awesome-smoking][用org mode 实践戒烟]]  [[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-9][Org-mode 简明手册]] [[https://github.com/marboo/orgmode-cn][Emacs的Org Mode – 用纯文本书写人生]]
+参考网站  [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-mode入门教程]] [[https://github.com/tshwangq/awesome-smoking][用org mode 实践戒烟]]  [[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-9][Org-mode 简明手册]] [[https://github.com/marboo/orgmode-cn][Emacs的Org Mode – 用纯文本书写人生]] [[https://github.com/marboo/orgmode-cn/blob/master/org.org][Org-Manual 7.8]]
+
+*** org-table
+   - 构造表头: |Name|Phone|Age 然后紧接着输入 C-c <RET>.
+   - C-c C-c  对表格进行重对齐操作但不移动光标的位置
+   - M-a 移动到光标当前域的开头位置
+   - M-e 移动到光标当前域的结尾位置
+   - M-<left>  移动当前列到左方(与左列交换位置)
+   - M-<right> 移动当前列到右方(与右列交换位置)
+   - M-<up> (org-table-move-row-up)
+   - 在表中输入 =$3+$4 然后按C-u C-c C-c 可自动求和
+   - C-c ^ 排序功能
+   - C-c | 通过输入大小的方式插入表格
+*** org 链接
+   - \[[链接地址][链接内容]\]  注：\为自己加入的
+   - \[[http://orgmode.org/orgguide.pdf][grgguid.pdf]\]
+   - \[[file:/home/maple/图片/test.jpg][a picture]\]
+   - \[[file:/home/maple/图片/test.jpg]\] 然后C-c C-x C-v 显示
+*** org-tudo
+   - C-c C-t 改变当前标签的状态
+   - C-u C-c C-t 选择当前标签的状态
+   - C-c / t  在一个sparse tree中查看TODO事项.
+   - C-u C-c / t 搜索指定的TODO状态
+
 
 
