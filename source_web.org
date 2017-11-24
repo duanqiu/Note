@@ -1,0 +1,9 @@
+* 本页面是收集一些网络资源
+
+** Github
+- [[https://github.com/marboo/CCBooks][开源著作列表]] [[https://github.com/emacs-china/hello-emacs][emacs新手入门资料汇集地]] [[https://github.com/jiangxincode/cnblogs][编程相关的cnblogs]]
+
+
+** weavi
+
+
