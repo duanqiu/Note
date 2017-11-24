@@ -3,6 +3,11 @@
 参考web：[[https://github.com/emacs-china/hello-emacs][emacs新手入门资料汇集地]]
 
 
+** 快捷键
+- C-e，回车 向下新插入一行
+
+
+
 
 ** magit
     - 添加文件 先创建并修改 然后在magit-status 里面按s键 加入track
