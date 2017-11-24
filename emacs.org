@@ -6,3 +6,8 @@
     - 添加文件 先创建并修改 然后在magit-status 里面按s键 加入track
     - 提交 使用命令magit-status后加入注释后要按C-c C-c 结束注释 然后才添加完成
     - http://www.fidding.me/article/16 这个文档里面写的很详细
+
+** org-mode
+参考网站  [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-mode入门教程]] [[https://github.com/tshwangq/awesome-smoking][用org mode 实践戒烟]]  [[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-9][Org-mode 简明手册]] [[https://github.com/marboo/orgmode-cn][Emacs的Org Mode – 用纯文本书写人生]]
+
+
