@@ -1,0 +1,8 @@
+* Emacs
+神一样的编辑器
+
+
+** magit
+    - 添加文件 先创建并修改 然后在magit-status 里面按s键 加入track
+    - 提交 使用命令magit-status后加入注释后要按C-c C-c 结束注释 然后才添加完成
+    - http://www.fidding.me/article/16 这个文档里面写的很详细
