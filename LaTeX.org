@@ -1,0 +1,10 @@
+* LaTeX 学习笔记
+
+
+** 中文设置
+参考Web:
+- [[http://blog.csdn.net/ProgramChangesWorld/article/details/51429138][ctex下使用其他中文字体]]  
+
+*** 设置字体
+- \setCJKfamilyfont{hwxk}{STXingkai}         
+- \newcommand{\huawenxingkai}{\CJKfamily{hwxk}}
