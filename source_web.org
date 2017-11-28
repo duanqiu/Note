@@ -6,4 +6,6 @@
 
 ** weavi
 
+** 科学类网站
+- [[https://www.geogebra.org/][动态数学演示]] [[http://zh.visualgo.net/zh][算法可视]] [[http://playground.tensorflow.org/][神经网络动态]] 
 
