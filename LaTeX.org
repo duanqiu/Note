@@ -3,7 +3,7 @@
 
 ** 中文设置
 参考Web:
-- [[http://blog.csdn.net/ProgramChangesWorld/article/details/51429138][ctex下使用其他中文字体]]  
+- [[http://blog.csdn.net/ProgramChangesWorld/article/details/51429138][ctex下使用其他中文字体]]  [[http://blog.csdn.net/programchangesworld/article/details/51553683][并排插入图片]] 
 
 *** 设置字体
 - \setCJKfamilyfont{hwxk}{STXingkai}         
