@@ -1,0 +1,13 @@
+* 本文档是记录一些软件的安装
+
+** windows 软件记录
+
+
+** ARCH linux 软件记录
+
+*** emacs相关软件
+****  liveTex的安装
+- 参考web：[[http://www.linuxidc.com/Linux/2016-08/133913.htm][Linux 系统下原版 TeX Live 2016 的安装与配置]] 
+
+*** matlab的安装 
+- 参考web：[[http://blog.csdn.net/hejunqing14/article/details/50265049][linux(x64)下安装Matlab 2015b破解版]] 

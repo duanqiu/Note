@@ -1,0 +1,13 @@
+* Git 的使用
+
+
+** Git的安装
+- 安装git安装包
+- 运行ssh-keygen -t rsa -C"mail@mail.com" 这个命令产生密钥
+- 将~/.ssh/id_rsa.pub的内容贴到github上
+- 使用命令ssh -T git@github.com来验证是否成功
+- 成功的标志是 hi xxx. You've successfully authenticated, but GitHub does not provide shell access.
+- 注：linux下不同用户有不同的密钥，要重新设置
+- 运行git config --global user.name "输入你的用户名"
+- 运行git config --global user.email "输入你的邮箱"
+- 大功告成
