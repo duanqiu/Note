@@ -8,3 +8,11 @@
 *** 设置字体
 - \setCJKfamilyfont{hwxk}{STXingkai}         
 - \newcommand{\huawenxingkai}{\CJKfamily{hwxk}}
+
+
+** 格式设置
+- ctexart 中section左对齐
+  - \CTEXsetup[format={\Large\bfseries}]{section}  
+- 设置边距
+  - \usepackage[top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
+- \maketitle   设置页面
