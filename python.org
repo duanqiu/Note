@@ -1,0 +1,9 @@
+* python使用笔记
+
+
+** 用conda创建一个新的环境空间
+1) conda create -n env_name python=2
+2) conda list查看安装了那些包
+3) source activate env_name 激活环境
+4) source deactivate laplace 关闭环境
+5) conda env export -n <env-name>导出环境
