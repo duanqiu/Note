@@ -9,3 +9,7 @@
 ** 科学类网站
 - [[https://www.geogebra.org/][动态数学演示]] [[http://zh.visualgo.net/zh][算法可视]] [[http://playground.tensorflow.org/][神经网络动态]] 
 
+
+** 编程语言相关web
+- [[https://www.lfd.uci.edu/~gohlke/pythonlibs/][python包]] [[http://blog.csdn.net/linzch3/article/details/51942150][pygame的安装]]
+
