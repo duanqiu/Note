@@ -68,31 +68,6 @@
      5) 改习惯也可以使用类似`.+2d/3d`这样的符号标示最小/最大的间隔时间. `.+2d/3d`的意思是,你希望至少每三天做一次这个工作,但是最多每两天做一次这个工作
      6) 蓝色：表示当天任务没有完成；绿色：表示当天任务已经完成；黄色：表示任务在第二天就会过期了；红色：表示工作在当天已经延误了。
      7) DEADLINE: <2005-10-01 Sat +1m -3d>. +1m就是repeater. 意思是每个月重复一次. 如果你需要在一个DEADLINE中同时表明repeater和指定预警期的话,则repeater需要放在前面,预警期放在后面
-** 使用YASnippet
-- 参考web：[[https://www.cnblogs.com/liweilijie/archive/2012/12/30/2840081.html][使用YASnippet]]
-  - 安装yasnippet
-  - yas/new-snippet
-#+BEGIN_SRC 
-　 # -*- mode: snippet -*-
- 　# name: 
- 　# key: 
- 　# binding: direct-keybinding
- 　# --
-   - [ ] 08:00-10:00点 ${1}
-   - [ ] 10:00-12:00点 ${2}
-   - [ ] 12:30-14:00点 ${3}
-   - [ ] 14:00-16:00点 ${4}
-   - [ ] 16:00-18:00点 ${5}
-   - [ ] 19:00-21:00点 ${6}
-
-#+END_SRC
-  - C-c C-c 选择要使用的模型
-  - 在要输入的地方打出key 然后按tab键即可
-  - 还有高级功能等待开发
-
-
-
-
 
 ** 使用YASnippet
 - 参考web：[[https://www.cnblogs.com/liweilijie/archive/2012/12/30/2840081.html][使用YASnippet]]
@@ -114,4 +89,4 @@
 #+END_SRC
   - C-c C-c 选择要使用的模型
   - 在要输入的地方打出key 然后按tab键即可
-  - 还有高级功能等待开发
+  - 要设置他永久有效，还要在配置文件中添加（require yasnippet） (yas/initialize)
