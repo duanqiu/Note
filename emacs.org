@@ -8,7 +8,9 @@
 
 
 
-
+[[file:]]Picture/emacs1.png 
+ [[file:Picture/emacs2.png]]
+[[file:Picture/emacs3.png]]
 ** magit
     - 添加文件 先创建并修改 然后在magit-status 里面按s键 加入track
     - 提交 使用命令magit-status后加入注释后要按C-c C-c 结束注释 然后才添加完成
@@ -90,3 +92,8 @@
   - C-c C-c 选择要使用的模型
   - 在要输入的地方打出key 然后按tab键即可
   - 要设置他永久有效，还要在配置文件中添加（require yasnippet） (yas/initialize)
+
+
+
+
+
