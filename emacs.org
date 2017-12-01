@@ -93,6 +93,8 @@
   - 在要输入的地方打出key 然后按tab键即可
   - 要设置他永久有效，还要在配置文件中添加（require yasnippet） (yas/initialize)
 
+** 包管理命令
+- customize-group
 
 
 
