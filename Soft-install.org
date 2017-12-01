@@ -1,4 +1,6 @@
-* 本文档是记录一些软件的安装
+* 本文档记录一些和软件相关的项目，还有一些好用的软件记录，进行备忘
+
+** 本文档是记录一些软件的安装
 
 ** windows 软件记录
 
@@ -11,3 +13,14 @@
 
 *** matlab的安装 
 - 参考web：[[http://blog.csdn.net/hejunqing14/article/details/50265049][linux(x64)下安装Matlab 2015b破解版]] 
+
+
+
+
+
+** 软件收藏
+*** windows 
+- Rolan 桌面收藏软件 看起来很方便
+- ScreenToGif 很好的截屏展示工具
+- ConEmu 替代windows命令行
+

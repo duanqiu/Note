@@ -3,7 +3,8 @@
 
 ** 用conda创建一个新的环境空间
 1) conda create -n env_name python=2
-2) conda list查看安装了那些包
-3) source activate env_name 激活环境
-4) source deactivate laplace 关闭环境
-5) conda env export -n <env-name>导出环境
+2) 也可以使用conda create --name your_env_name python=3.5 numpy scipy
+3) conda list查看安装了那些包
+4) source activate env_name 激活环境 windows中不用source
+5) source deactivate laplace 关闭环境
+6) conda env export -n <env-name>导出环境
