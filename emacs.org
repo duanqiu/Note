@@ -2,7 +2,7 @@
 神一样的编辑器
 参考web：[[https://github.com/emacs-china/hello-emacs][emacs新手入门资料汇集地]] 
 
-
+- 设置默认encoding (set-language-environment  "utf8")
 ** 快捷键
 - C-e，回车 向下新插入一行
 
@@ -17,7 +17,11 @@
     - http://www.fidding.me/article/16 这个文档里面写的很详细
 
 ** org-mode
-参考网站  [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-mode入门教程]] [[https://github.com/tshwangq/awesome-smoking][用org mode 实践戒烟]]  [[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-9][Org-mode 简明手册]] [[https://github.com/marboo/orgmode-cn][Emacs的Org Mode – 用纯文本书写人生]] [[https://github.com/marboo/orgmode-cn/blob/master/org.org][Org-Manual 7.8]] [[http://holbrook.github.io/2012/04/12/emacs_orgmode_editor.html][org-mode，最好的文档编辑利器]] [[https://segmentfault.com/a/1190000008313904][用Org-Mode和Jekyll写博客]]
+参考网站 [[http://orgmode.org/manual/index.html][The Org Manual]] [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-mode入门教程]] [[https://github.com/tshwangq/awesome-smoking][用org mode 实践戒烟]]  [[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-9][Org-mode 简明手册]] [[https://github.com/marboo/orgmode-cn][Emacs的Org Mode – 用纯文本书写人生]] [[https://github.com/marboo/orgmode-cn/blob/master/org.org][Org-Manual 7.8]] [[http://holbrook.github.io/2012/04/12/emacs_orgmode_editor.html][org-mode，最好的文档编辑利器]] [[https://segmentfault.com/a/1190000008313904][用Org-Mode和Jekyll写博客]]
+
+- 设置agenda的目录
+(with-eval-after-load 'org
+(setq org-agenda-files '("~/Myfile/Org"))) ;; 如果org-mode没有生效 ，就用C-h v 来查看org-agenda-files
 
 *** org-table
    - 构造表头: |Name|Phone|Age 然后紧接着输入 C-c <RET>.
@@ -90,12 +94,12 @@
   ("n" "Note" entry (file+headline ,"~/Documents/Project/org-mode/note.org" "Index")
    "* Note %?\n  %i\n  %a")))
 #+END_SRC
-
-
+** org-pomodoro
 
 ** 使用YASnippet
 - 参考web：[[https://www.cnblogs.com/liweilijie/archive/2012/12/30/2840081.html][使用YASnippet]]
   - 安装yasnippet
+  - (yas-global-mode 1) 激活yasmippets
   - yas/new-snippet
 #+BEGIN_SRC 
 　 # -*- mode: snippet -*-
