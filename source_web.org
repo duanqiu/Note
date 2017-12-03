@@ -1,15 +1,28 @@
 * 本页面是收集一些网络资源
 
 ** Github
-- [[https://github.com/marboo/CCBooks][开源著作列表]] [[https://github.com/emacs-china/hello-emacs][emacs新手入门资料汇集地]] [[https://github.com/jiangxincode/cnblogs][编程相关的cnblogs]]
+- [[https://github.com/marboo/CCBooks][开源著作列表]]
+- [[https://github.com/emacs-china/hello-emacs][emacs新手入门资料汇集地]]
+- [[https://github.com/jiangxincode/cnblogs][编程相关的cnblogs]]
 
 
 ** weavi
 
 ** 科学类网站
-- [[https://www.geogebra.org/][动态数学演示]] [[http://zh.visualgo.net/zh][算法可视]] [[http://playground.tensorflow.org/][神经网络动态]] 
+- [[https://www.geogebra.org/][动态数学演示]] 
+- [[http://zh.visualgo.net/zh][算法可视]]
+- [[http://playground.tensorflow.org/][神经网络动态]] 
 
 
 ** 编程语言相关web
-- [[https://www.lfd.uci.edu/~gohlke/pythonlibs/][python包]] [[http://blog.csdn.net/linzch3/article/details/51942150][pygame的安装]]
+- [[https://www.lfd.uci.edu/~gohlke/pythonlibs/][python包]]
+- [[http://blog.csdn.net/linzch3/article/details/51942150][pygame的安装]]
+
+
+
+
+** 优秀的博客收集
+- [[https://dirtysalt.github.io/html/index.html][dirtysalt's homepage]] 这是用org导出的，专注于内容，而且里面的内容也很丰富
+- [[http://forrestchang.com/14824097554043.html][使用Emacs Org-mode + GitHub Pages 来写博客]] 一个用org+github搭建博客的教程
+- [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]] 
 

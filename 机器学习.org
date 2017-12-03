@@ -1,10 +1,36 @@
 * 本文档是关于机器学习相关的笔记
-
-
-
-
 ** 神经网络
+- 为什么神经网络一般越深越好 why deep learning？
+  1) 就像写函数，然后分块分时间调用，比所有东西写在main函数中要好
+  2) 检测是[长头发|短头发][男|女]的时候，一起检测，因为长头发男的人少，所以perform很差.但分片，一部分检测性别，一部分检测头发长度然后再用分类器分类就好得多。还有，一部分检测一部分部件也可以 [[../Picture/Whydeep.PNG]]
+
+- 语音为什么需要deep （deep powerful）
+  1) 数字电路类比（不仅仅是因为参数多而暴力碾压）
+
+  2) 剪窗花类比
+
+  3) 比较有效率的方法来使用data
+
+
 
 *** 卷积神经网络
 - 如何理解网络的每一层的作用
-  1. 固定参数，改变输入（梯度下降法），使那一层的输出最大（可以观察到某种图案）
+  1) 固定参数，改变输入（梯度下降法），使那一层的输出最大（可以观察到某种图案）x*=arg max y^i
+
+
+[[https://deepdreamgenerator.com/assets/landing/img/blend/horizontal/ds.jpg][deepdream]]
+
+*** RCC(Recurrent)
+- Example Application
+  - Slot Filling
+    - 订票系统
+    
+- 分类
+  - Elman Network
+
+  - Jordan Network
+
+  - Bidirectional RNN（双向 ）
+
+  - Long Short-term Memory(LSTM)
+    [[file:Picture/LSTM.JPG][LSTM截图]]

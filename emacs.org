@@ -4,13 +4,15 @@
 
 - 设置默认encoding (set-language-environment  "utf8")
 ** 快捷键
-- C-e，回车 向下新插入一行
+- C-e，回车 向下新插入一行(这就是将光标移到结尾然后插入enter)
+- C-c C-x C-v显示图片
 
 
 
-[[file:]]Picture/emacs1.png 
- [[file:Picture/emacs2.png]]
+[[file:]]Picture/emacs1.png
+[[file:Picture/emacs2.png]]
 [[file:Picture/emacs3.png]]
+
 ** magit
     - 添加文件 先创建并修改 然后在magit-status 里面按s键 加入track
     - 提交 使用命令magit-status后加入注释后要按C-c C-c 结束注释 然后才添加完成
@@ -22,7 +24,7 @@
 - 设置agenda的目录
 (with-eval-after-load 'org
 (setq org-agenda-files '("~/Myfile/Org"))) ;; 如果org-mode没有生效 ，就用C-h v 来查看org-agenda-files
-
+- 插入图片 C-c C-l
 *** org-table
    - 构造表头: |Name|Phone|Age 然后紧接着输入 C-c <RET>.
    - C-c C-c  对表格进行重对齐操作但不移动光标的位置
