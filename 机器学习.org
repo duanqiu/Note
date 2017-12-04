@@ -2,7 +2,7 @@
 ** 神经网络
 - 为什么神经网络一般越深越好 why deep learning？
   1) 就像写函数，然后分块分时间调用，比所有东西写在main函数中要好
-  2) 检测是[长头发|短头发][男|女]的时候，一起检测，因为长头发男的人少，所以perform很差.但分片，一部分检测性别，一部分检测头发长度然后再用分类器分类就好得多。还有，一部分检测一部分部件也可以 [[../Picture/Whydeep.PNG]]
+  2) 检测是[长头发|短头发][男|女]的时候，一起检测，因为长头发男的人少，所以perform很差.但分片，一部分检测性别，一部分检测头发长度然后再用分类器分类就好得多。还有，一部分检测一部分部件也可以 [[Picture/Whydeep.PNG]]
 
 - 语音为什么需要deep （deep powerful）
   1) 数字电路类比（不仅仅是因为参数多而暴力碾压）
@@ -33,4 +33,7 @@
   - Bidirectional RNN（双向 ）
 
   - Long Short-term Memory(LSTM)
-    [[file:Picture/LSTM.JPG][LSTM截图]]
+    [[file:Picture/LSTM.JPG][LSTM截图]] [[file:Picture/LSTM2.jpg][LSTM截图2]]
+
+** SVM
+ 看台湾大学李宏毅的相关SVM的视频，关于loss function与Kenal function 不一样的思路讲解，但很清晰很深刻
