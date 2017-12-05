@@ -36,4 +36,5 @@
     [[file:Picture/LSTM.JPG][LSTM截图]] [[file:Picture/LSTM2.jpg][LSTM截图2]]
 
 ** SVM
+- 相同的数学公式可以用不同方法推导，只是看问题的角度不同而已（要学会从不同角度看问题）
  看台湾大学李宏毅的相关SVM的视频，关于loss function与Kenal function 不一样的思路讲解，但很清晰很深刻

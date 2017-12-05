@@ -1,0 +1,26 @@
+* 要学的网络公开课
+
+*** 社会
+- [ ] 国立台湾大学公开课：爱情社会学 孙中兴 [[http://open.163.com/special/ntu/aiqingshehuixue.html][爱情社会学]]
+- [ ] 国立台湾大学公开课：幽默社会学 孙中兴 [[http://open.163.com/special/ntu/youmoshehuixue.html][幽默社会学]]
+- 
+
+
+*** 古风
+- [ ] 国立台湾大学公开课：孔子-社会学的研究 [[http://open.163.com/movie/2017/9/U/U/MCUJ7O4Q1_MCUL5T3UU.html][孔子-社会学的研究]]
+
+
+
+*** 科技
+- 上海交通大学 统计机器学习 张志华 [[https://www.bilibili.com/video/av9036658/][统计机器学习]]  
+- 国科大模式识别与机器学习 [[https://www.bilibili.com/video/av16300399/][模式识别与机器学习]]
+   不要一开始就进去，而是要明白他要干什么，然后再看怎么做
+- 机器学习导论 张志华 [[http://study.163.com/course/courseMain.htm?courseId=1694003][机器学习导论]]
+- 统计机器学习 张志华 [[http://study.163.com/course/courseMain.htm?courseId=1692004#/courseDetail][统计机器学习]]
+- 
+
+** 社会
+
+** 古风
+
+** 科技
