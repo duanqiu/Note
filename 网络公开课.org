@@ -19,6 +19,77 @@
 - 统计机器学习 张志华 [[http://study.163.com/course/courseMain.htm?courseId=1692004#/courseDetail][统计机器学习]]
 - 
 
+
+*** 国科大实景课堂
+- 账号:
+     zhangxiaoyu215@mails.ucas.ac.cn 2015E8015161067
+- [[http://v.ucas.ac.cn/course/CourseIndex.do?menuCode=2&courseid=19160][实用最优化算法及其应用]] 
+  1. 预修课程： 高等数学、数值线性代数
+  2. 教材 袁亚湘，孙文瑜《最优化理论与方法》
+  3. 27讲
+- [[http://v.ucas.ac.cn/course/CourseIndex.do?menuCode=2&courseid=20b7266e684c443082812fec380202b4][实分析]]
+  1. 张志涛
+  2. 37讲
+- [[http://v.ucas.ac.cn/course/CourseIndex.do?menuCode=2&courseid=8ead4f40c935459b86bff9ac26e5f93f][泛函分析]]
+  1. 张志涛
+  2. 32讲
+- [[http://v.ucas.ac.cn/course/CourseIndex.do?menuCode=2&courseid=79cefa1ed06c4004b6c868707ffd66b9][拓扑基础]]
+  1. 段海豹
+  2. 10讲
+- [[http://v.ucas.ac.cn/course/CourseIndex.do?menuCode=2&courseid=14555][小波与傅里叶分析基础]] 
+  1. 王蕊
+  2. 预修课程 :微积分、线性代数
+  3. 教材 :Albert Boggess, Francis J. Narcowich, A First Course in Wavelets with Fourier Analysis，电子工业出版社，北京，2002。
+  4. 6讲
+- [[http://v.ucas.ac.cn/course/CourseIndex.do?menuCode=2&courseid=29934][小波与滤波器设计]]
+  1. 彭思龙
+  2. 预修课程 :高等数学、线性代数、泛函分析基础
+  3. 教材 : Gilbert Strang T. Nguycn, Wavelets and Filter Banks, Wellesley -Cambridge, 1996.
+  4. 22讲
+- [[http://v.ucas.ac.cn/course/CourseIndex.do?menuCode=2&courseid=502e8ad3f5224bffb284b20021c8b2af][概率论]]
+  1. 讲师 : 巩馥洲
+  2. 34讲
+- [[http://v.ucas.ac.cn/course/getplaytitle.do?menuCode=2&code=4a282b69a1024d4b81c379bdb1cd0b91&classcode=1&classid=abd1312cc82645a9869eba3cf186257d&sectionNumber=1&sectionDisplay=0][数理统计]]
+  1. 讲师 : 王启华
+  2. 32讲
+
+- [[http://v.ucas.ac.cn/course/CourseIndex.do?menuCode=2&courseid=bd674f52e57c4872877073b633d427e9][数值分析]]
+  1. 讲师 : 周爱辉
+  2. 33讲
+
+- [[http://v.ucas.ac.cn/course/CourseIndex.do?menuCode=2&courseid=e36469427cf64ec7ab4ca38f3d3017cd][计算机图形学基础]]
+  1. 讲师 : 李华
+
+  2. 14讲
+
+- [[http://v.ucas.ac.cn/course/CourseIndex.do?menuCode=2&courseid=bf7c8def9fd1462a9816fe540518700f][理论计算机科学基础]]
+  1. 讲师 : 杨光
+  2. 26讲
+
+- [[http://v.ucas.ac.cn/course/CourseIndex.do?menuCode=2&courseid=a05e47d42c024cdca8fb88d7d459a0e3][常微分方程]]
+  1. 讲师 : 唐贻发
+
+  2. 26讲
+
+- [[http://v.ucas.ac.cn/course/getplaytitle.do?menuCode=2&code=0e25526ef60a4089ab3c6897ce7aaf09&classcode=1&classid=c035ba085b5345789a5cdb0d3eddb97b&sectionNumber=7&sectionDisplay=0][机器学习导论]]
+  1. 讲师 : 程学旗
+  2. 12讲
+- [[http://v.ucas.ac.cn/course/getplaytitle.do?menuCode=2&code=9d698c770643477483e2524fcdff3c11&classcode=1&classid=5fbea9f08cd743d09ef2c53533d15498&sectionNumber=1&sectionDisplay=0][量子力学]]
+  1. 讲师 : 赵强
+  2. 20讲
+- [[http://v.ucas.ac.cn/course/getplaytitle.do?menuCode=2&code=11292&classcode=1&classid=ndA7Ij0Wvj6mDXcTg7&sectionNumber=25&sectionDisplay=1][广义相对论]]
+  1. 讲师 : 章德海
+  2. 25讲
+- [[http://v.ucas.ac.cn/course/CourseIndex.do?menuCode=2&courseid=67b2de72e4634d23a7cfa6d36e2eb6ae][数字图像处理]]
+  1. 讲师 : 山世光(大神)
+  2. 16讲
+- [[http://v.ucas.ac.cn/course/CourseIndex.do?menuCode=2&courseid=3ba9b9804c8f43fdbbfa21349b477648][自然语言处理]]
+  1. 讲师 : 宗成庆(大神)
+  2. 18讲
+- [[http://v.ucas.ac.cn/course/getplaytitle.do?menuCode=2&code=18287&classcode=1&classid=f1UmbKsO8WdCZtnfTQ&sectionNumber=19&sectionDisplay=1][模式识别]]
+  1. 讲师 : 黄庆明
+  2. 21讲
+实分析 复分析 泛函
 ** 社会
 
 ** 古风
