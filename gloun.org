@@ -1,0 +1,97 @@
+* gloun 学习笔记
+
+** 学习
+
+*** 纯净安装gloun
+**** conda 下载优化
+# 优先使用清华conda镜像
+conda config --prepend channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+# 也可选用科大conda镜像
+conda config --prepend channels http://mirrors.ustc.edu.cn/anaconda/pkgs/free/
+****  git clone https://github.com/mli/gluon-tutorials-zh.git
+**** cd gluon-tutorials-zh
+**** conda env create -f environment.yml
+****  activate gluon  or  deactivate
+**** jupyter读md乱码
+pip install https://github.com/mli/notedown/tarball/master
+jupyter notebook --NotebookApp.contents_manager_class='notedown.NotedownContentsManager'
+
+*** ndarray
+[[https://mxnet.incubator.apache.org/api/python/ndarray.html][ndarrayAPI]] 
+
+*** autograd
+attach_grad()  with autograd.record()   backward()
+
+*** 数据处理
+#+BEGIN_SRC |python
+import random
+batch_size = 10
+def data_iter():
+    # 产生一个随机索引
+    idx = list(range(num_examples))
+    random.shuffle(idx)
+    for i in range(0, num_examples, batch_size):
+        j = nd.array(idx[i:min(i+batch_size,num_examples)])
+        yield nd.take(X, j), nd.take(y, j)
+#+END_SRC
+#+BEGIN_SRC|py
+def square_loss(yhat, y):
+    # 注意这里我们把y变形成yhat的形状来避免矩阵形状的自动转换
+    return (yhat - y.reshape(yhat.shape)) ** 2
+
+def SGD(params, lr):
+    for param in params:
+        param[:] = param - lr * param.grad
+#+END_SRC
+#+BEGIN_SRC 
+batch_size = 10
+dataset = gluon.data.ArrayDataset(X, y)
+data_iter = gluon.data.DataLoader(dataset, batch_size, shuffle=True)
+#+END_SRC
+
+
+
+*** gluon 初始网络
+#+BEGIN_SRC 
+net = gluon.nn.Sequential()
+net.add(gluon.nn.Dense(1))
+net.initialize()
+square_loss = gluon.loss.L2Loss()
+trainer = gluon.Trainer(
+    net.collect_params(), 'sgd', {'learning_rate': 0.1})
+
+epochs = 5
+batch_size = 10
+for e in range(epochs):
+    total_loss = 0
+    for data, label in data_iter:
+        with autograd.record():
+            output = net(data)
+            loss = square_loss(output, label)
+        loss.backward()
+        trainer.step(batch_size)
+        total_loss += nd.sum(loss).asscalar()
+    print("Epoch %d, average loss: %f" % (e, total_loss/num_examples))
+
+#+END_SRC
+softmax 的理解：先把每项都变成正的（用exp），然后将其均值变为1
+#+BEGIN_SRC 
+from mxnet import nd
+def softmax(X):
+    exp = nd.exp(X)
+    # 假设exp是矩阵，这里对行进行求和，并要求保留axis 1，
+    # 就是返回 (nrows, 1) 形状的矩阵
+    partition = exp.sum(axis=1, keepdims=True)
+    return exp / partition
+#+END_SRC
+先使用Flatten层将输入数据转成 batch_size x ? 的矩阵，然后输入到10个输出节点的全连接层
+
+#+BEGIN_SRC python
+from mxnet import gluon
+
+net = gluon.nn.Sequential()
+with net.name_scope():
+    net.add(gluon.nn.Flatten())
+    net.add(gluon.nn.Dense(10))
+net.initialize()
+#+END_SRC
