@@ -22,7 +22,7 @@
 
 *** 国科大实景课堂
 - 账号:
-     zhangxiaoyu215@mails.ucas.ac.cn 2015E8015161067
+     zhangxiaoyu215@mails.ucas.ac.cn 2015E8015161067DQ
 - [[http://v.ucas.ac.cn/course/CourseIndex.do?menuCode=2&courseid=19160][实用最优化算法及其应用]] 
   1. 预修课程： 高等数学、数值线性代数
   2. 教材 袁亚湘，孙文瑜《最优化理论与方法》
