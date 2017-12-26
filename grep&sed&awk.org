@@ -86,6 +86,7 @@
 			选项：
 				-F：指明输入时用到的字段分隔符；
 				-v var=value: 自定义变量；
+                        注： 引用变量直接写 不用加$
 
 		1、print
 
@@ -104,11 +105,11 @@
 				ORS：output record seperator，输出时的换行符；
 
 				NF：number of field，字段数量
-					{print NF}, {print $NF}
+					{print NF}打印每行字段数目, {print $NF} 打印每行最后一个字段
 				NR：number of record, 行数；
 				FNR：各文件分别计数；行数；
 
-				FILENAME：当前文件名；
+				FILENAME：当前文件名； 
 
 				ARGC：命令行参数的个数；
 				ARGV：数组，保存的是命令行所给定的各参数；
