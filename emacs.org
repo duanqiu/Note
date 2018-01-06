@@ -7,8 +7,6 @@
 - C-e，回车 向下新插入一行(这就是将光标移到结尾然后插入enter)
 - C-c C-x C-v显示图片
 
-
-
 [[file:]]Picture/emacs1.png
 [[file:Picture/emacs2.png]]
 [[file:Picture/emacs3.png]]
@@ -25,6 +23,11 @@
 (with-eval-after-load 'org
 (setq org-agenda-files '("~/Myfile/Org"))) ;; 如果org-mode没有生效 ，就用C-h v 来查看org-agenda-files
 - 插入图片 C-c C-l
+*** 一般快捷键
+- C-c C-x f 添加注脚
+- C-c C-x C-f 强调文字
+- C-c C-c 可以跳转到注脚，也可以跳到正文
+- <s 然后TAB 就是注释
 *** org-table
    - 构造表头: |Name|Phone|Age 然后紧接着输入 C-c <RET>.
    - C-c C-c  对表格进行重对齐操作但不移动光标的位置
@@ -59,6 +62,7 @@
    - =C-c C-c= 改变 checkbox状态
    - 插入`[/ ]`或`[% ]` 可统计子标签的完成度
    - =C-c a= 进入agenda view
+   - =M-S RET= 添加带有[ ]的子任务
    - 更改todo关键字
      1) (setq org-todo-keywords '((sequence "TODO" "FEEDBACK" "VERIFY" "|" "DONE" "DELEGATED")))
      2) 这个`|`竖线划分了哪些状态是属于未完结状态,哪些状态是出于已完结状态. 如果你没有提供分隔线,那么最后那个状态被认为是已完结状态.
@@ -97,7 +101,6 @@
    "* Note %?\n  %i\n  %a")))
 #+END_SRC
 ** org-pomodoro
-
 ** 使用YASnippet
 - 参考web：[[https://www.cnblogs.com/liweilijie/archive/2012/12/30/2840081.html][使用YASnippet]]
   - 安装yasnippet
@@ -122,8 +125,4 @@
   - 要设置他永久有效，还要在配置文件中添加（require yasnippet） (yas/initialize)
 
 ** 包管理命令
-- customize-group
-
-
-
-
+- customize-grou
