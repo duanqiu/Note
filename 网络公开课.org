@@ -8,7 +8,8 @@
 
 *** 古风
 - [ ] 国立台湾大学公开课：孔子-社会学的研究 [[http://open.163.com/movie/2017/9/U/U/MCUJ7O4Q1_MCUL5T3UU.html][孔子-社会学的研究]]
-
+- [ ] 国立台湾大学公开课：孟子思想的現代探索 [[http://ocw.aca.ntu.edu.tw/ntu-ocw/index.php/ocw/cou/100S210/2][孟子思想的現代探索]]
+- [ ] 国立台湾大学公开课：
 
 
 *** 科技
@@ -17,7 +18,6 @@
    不要一开始就进去，而是要明白他要干什么，然后再看怎么做
 - 机器学习导论 张志华 [[http://study.163.com/course/courseMain.htm?courseId=1694003][机器学习导论]]
 - 统计机器学习 张志华 [[http://study.163.com/course/courseMain.htm?courseId=1692004#/courseDetail][统计机器学习]]
-- 
 
 
 *** 国科大实景课堂
