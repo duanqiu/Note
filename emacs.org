@@ -2,7 +2,6 @@
 神一样的编辑器
 参考web：[[https://github.com/emacs-china/hello-emacs][emacs新手入门资料汇集地]] 
 
-- 设置默认encoding (set-language-environment  "utf8")
 ** 快捷键
 - C-e，回车 向下新插入一行(这就是将光标移到结尾然后插入enter)
 - C-c C-x C-v显示图片
@@ -127,6 +126,7 @@
 ** 包管理命令
 - customize-grou
 ** 编码问题
+- 设置默认encoding (set-language-environment  "utf8")
 *** <2018-04-03 Tue> 
 在archlinux 上使用Dired 发现文件名乱码而内容显示正常多番尝试下 最后  (setq file-name-coding-system 'utf-8)解决了乱码问题 
 唉 emacs搞得我好累啊！！！
