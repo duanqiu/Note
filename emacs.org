@@ -130,3 +130,28 @@
 *** <2018-04-03 Tue> 
 在archlinux 上使用Dired 发现文件名乱码而内容显示正常多番尝试下 最后  (setq file-name-coding-system 'utf-8)解决了乱码问题 
 唉 emacs搞得我好累啊！！！
+** 截图设置
+现在电脑上安装scrot程序员 然后将下列代码加入到程序中
+#+BEGIN_SRC lisp
+ 
+(defun my-screenshot ()
+  "Take a screenshot into a unique-named file in the current buffer file
+ directory and insert a link to this file."
+  (interactive)
+  (setq filename
+        (concat (make-temp-name
+                 (concat (file-name-directory (buffer-file-name)) "images/" ) ) ".png"))
+  (if (file-accessible-directory-p (concat (file-name-directory
+ (buffer-file-name)) "images/"))
+  nil
+  (make-directory "images"))
+(call-process-shell-command "scrot" nil nil nil nil "-s" (concat
+                              "\"" filename "\"" ))
+(insert (concat "[[" filename "]]"))
+(org-display-inline-images) 
+)
+
+
+(spacemacs/set-leader-keys "op" 'my-screenshot)
+#+END_SRC
+

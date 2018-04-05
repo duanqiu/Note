@@ -26,6 +26,4 @@ vim .git-credentials
 终端下执行  git config --global credential.helper store
 可以看到生成~/.gitconfig文件
 
- 
-
 
