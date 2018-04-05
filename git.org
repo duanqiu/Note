@@ -13,5 +13,15 @@
 - 大功告成
 - archlinux 还是不行 正在想办法
 
+** 在archlinux下 这样怎么都不行，找了很久，找到如下解决办法
 
+在~/下， touch创建文件 .git-credentials,
+#+BEGIN_SRC vim 
+touch .git-credentials
+vim .git-credentials
+#+END_SRC
+编辑此文件，输入内容格式：
+    https://{username}:{password}@github.com
 
+终端下执行  git config --global credential.helper store
+可以看到生成~/.gitconfig文件
