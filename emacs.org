@@ -131,7 +131,7 @@
 在archlinux 上使用Dired 发现文件名乱码而内容显示正常多番尝试下 最后  (setq file-name-coding-system 'utf-8)解决了乱码问题 
 唉 emacs搞得我好累啊！！！
 ** 截图设置
-现在电脑上安装scrot程序员 然后将下列代码加入到程序中
+先在电脑上安装scrot程序员 然后将下列代码加入到程序中
 #+BEGIN_SRC lisp
  
 (defun my-screenshot ()
@@ -155,3 +155,9 @@
 (spacemacs/set-leader-keys "op" 'my-screenshot)
 #+END_SRC
 
+** spacemacs使用jupyter notebook
+
+1) 在命令行中加入 ipython-notebook 其中会安装ein来连接jupyter
+2) 在命令行中设置jupyter的密码  jupyter-notebook password
+3) 在emacs中使用 M-x ein:notebooklist-login来输入密码
+4) 在emacs中使用 M-x ein:notebooklist-open来登录 大功告成
