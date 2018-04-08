@@ -1,0 +1,7 @@
+* this file is my note for handon-ml
+**  PART I  The Fundamentals of Machine Learning
+机器学习算法的分类：
+[[/home/dellqang/Emacs_files/Note/images/1997sLr.png]]
+[[/home/dellqang/Emacs_files/Note/images/19975Vx.png]]
+[[/home/dellqang/Emacs_files/Note/images/1997rfA.png]]
+[[/home/dellqang/Emacs_files/Note/images/1997F0M.png]]

@@ -16,7 +16,7 @@
     - http://www.fidding.me/article/16 这个文档里面写的很详细
 
 ** org-mode
-参考网站 [[http://orgmode.org/manual/index.html][The Org Manual]] [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-mode入门教程]] [[https://github.com/tshwangq/awesome-smoking][用org mode 实践戒烟]]  [[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-9][Org-mode 简明手册]] [[https://github.com/marboo/orgmode-cn][Emacs的Org Mode – 用纯文本书写人生]] [[https://github.com/marboo/orgmode-cn/blob/master/org.org][Org-Manual 7.8]] [[http://holbrook.github.io/2012/04/12/emacs_orgmode_editor.html][org-mode，最好的文档编辑利器]] [[https://segmentfault.com/a/1190000008313904][用Org-Mode和Jekyll写博客]]
+参考网站 [[http://orgmode.org/manual/index.html][The Org Manual]] [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-mode入门教程]] [[https://github.com/tshwangq/awesome-smoking][用org mode 实践戒烟]]  [[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-9][Org-mode 简明手册]] [[https://github.com/marboo/orgmode-cn][Emacs的Org Mode – 用纯文本书写人生]] [[https://github.com/marboo/orgmode-cn/blob/master/org.org][Org-Manual 7.8]] [[http://holbrook.github.io/2012/04/12/emacs_orgmode_editor.html][org-mode，最好的文档编辑利器]] [[https://segmentfault.com/a/1190000008313904][用Org-Mode和Jekyll写博客]] 
 
 - 设置agenda的目录
 (with-eval-after-load 'org
@@ -157,7 +157,7 @@
 
 ** spacemacs使用jupyter notebook
 
-1) 在命令行中加入 ipython-notebook 其中会安装ein来连接jupyter
+1) 在emacs的layers中加入 ipython-notebook 其中会安装ein来连接jupyter
 2) 在命令行中设置jupyter的密码  jupyter-notebook password
 3) 在emacs中使用 M-x ein:notebooklist-login来输入密码
 4) 在emacs中使用 M-x ein:notebooklist-open来登录 大功告成
