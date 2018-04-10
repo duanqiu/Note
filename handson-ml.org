@@ -20,3 +20,6 @@ A typical performance measure for regression problems is the Root Mean Square Er
 *** 数据的预处理  
 You identified a few data quirks that you may want to clean up before feeding the data to a Machine Learning algorithm, and you found interesting correlations between attributes, in particular with the target attribute. You also noticed that some attributes have a tail-heavy distribution, so you may want to trans‐ form them (e.g., by computing their logarithm). 
 One last thing you may want to do before actually preparing the data for Machine Learning algorithms is to try out various attribute combinations.
+**  CHAPTER 3 Classification
+[[./images/1860o1Q.png]]
+[[./images/18601_W.png]]
