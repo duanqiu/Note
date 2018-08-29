@@ -62,7 +62,7 @@
 
    9. 步进 1~2 2~2 :sed -n  '1~2p' test.txt 显示奇数行；sed -n '2~2p' test.txt 显示偶数行
 
-
+      
 ** GNU awk：
 	
 	文本处理三工具：grep, sed, awk
@@ -316,4 +316,4 @@
 			9.2 自定义函数
 
 				《sed和awk》
-
+ 

@@ -161,3 +161,43 @@
 2) 在命令行中设置jupyter的密码  jupyter-notebook password
 3) 在emacs中使用 M-x ein:notebooklist-login来输入密码
 4) 在emacs中使用 M-x ein:notebooklist-open来登录 大功告成
+** spacemacs快捷键（非space）
+1) 跳转
+ i I（一个光标前，一个光标后）
+a A（一个单词后面，一个行尾）
+o O (换行插入 一个下一行，一个上一行)
+C-f
+C-b
+C-u
+C-d
+use d and y or " " combination with the next
+w -word(向后移动一个单词)
+w Move to next word
+W Move to next blank delimited word
+b Move to the beginning of the word
+B Move to the beginning of blank delimted word
+e Move to the end of the word
+E Move to the end of Blank delimited word
+( Move a sentence back
+) Move a sentence forward
+{ Move a paragraph back
+} Move a paragraph forward
+^ 行首 $行尾
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
