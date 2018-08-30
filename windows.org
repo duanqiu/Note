@@ -1,0 +1,6 @@
+* windows 快捷键
+
+
+创建桌面 WIn+TAB
+切换桌面 Ctrl+win + 左右 
+
