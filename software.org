@@ -1,0 +1,7 @@
+* chrome 
+平常用全屏  使用vim来操纵网页
+
+Alt+F4 或 Ctrl+Shift+W：关闭当前窗口。
+Ctrl+W 或 Ctrl+F4：关闭当前标签页或弹出式窗口。
+
+
