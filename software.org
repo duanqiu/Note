@@ -5,3 +5,32 @@ Alt+F4 或 Ctrl+Shift+W：关闭当前窗口。
 Ctrl+W 或 Ctrl+F4：关闭当前标签页或弹出式窗口。
 
 
+* matlab
+
+** 讲matlab的默认编码换位utf-8编码
+
+
+在命令窗口输入命令：
+
+feature('locale')
+可以看到多是用 GBK 进行编码。
+
+如果想以 utf-8 编码，而不是 GBK 编码的话，请找到MATLAB的安装路径，我的是D:\MATLAB\R2016b。找到bin目录下的 locale 数据库文件 lcdata.xml，即完整路径：D:\MATLAB\R2016b\bin\lcdata.xml
+
+打开并删除lcdata.xml中的：
+
+<encoding name=”GBK”>  
+  < encoding_alias name=”936”>  
+</encoding>
+并将：
+
+<encoding name=”UTF-8”>  
+  <encoding_alias name=”utf8”/> 
+</encoding>  
+改为：
+
+<encoding name=”UTF-8”>  
+  <encoding_alias name=”utf8”/>  
+  <encoding_alias name=”GBK”/>  
+</encoding>  
+重启 matlab 之后，即以 utf-8 编码
