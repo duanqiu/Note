@@ -1,0 +1,29 @@
+* 本文件用于存放linux相关的操作
+
+
+** 字体安装
+查看系统中的字体
+fc-list
+查看系统中的中文字体
+fc-list :lang=zh
+
+
+mkdir /usr/share/fonts/xin_fonts
+cp /home/aa.ttf xin_fonts/
+cd xin_fonts/
+mkfontscale 
+mkfontdir
+fc-cache
+
+
+
+** tmux
+
+配置完以后，重启tmux起效，或者先按C+b，然后输入：，进入命令行模式，在命令行模式下输入：
+
+source-file ~/.tmux.conf
+
+你也可以跟我一样，在配置文件中加入下面这句话，以后改了只需要按前缀+r了。
+
+#将r 设置为加载配置文件，并显示"reloaded!"信息
+bind r source-file ~/.tmux.conf \; display "Reloaded!"
