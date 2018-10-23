@@ -1,0 +1,25 @@
+* this file is my note for handon-ml
+**  PART I  The Fundamentals of Machine Learning
+机器学习算法的分类：
+ 
+[[./images/1997sLr.png]]
+[[./images/19975Vx.png]]
+[[./images/1997rfA.png]]
+[[./images/1997F0M.png]]
+**   CHAPTER 2 End-to-End Machine Learning Project
+
+   
+[[./images/1997S-S.png]]
+
+*** 均方误差 
+A typical performance measure for regression problems is the Root Mean Square Error (RMSE). It measures the standard deviation of the errors the system makes in its predictions. For example, an RMSE equal to 50,000 means that about 68% of the system’s predictions fall within $50,000 of the actual value, and about 95% of the predictions fall within $100,000 of the actual value.
+ 
+
+ 
+1
+*** 数据的预处理  
+You identified a few data quirks that you may want to clean up before feeding the data to a Machine Learning algorithm, and you found interesting correlations between attributes, in particular with the target attribute. You also noticed that some attributes have a tail-heavy distribution, so you may want to trans‐ form them (e.g., by computing their logarithm). 
+One last thing you may want to do before actually preparing the data for Machine Learning algorithms is to try out various attribute combinations.
+**  CHAPTER 3 Classification
+[[./images/1860o1Q.png]]
+[[./images/18601_W.png]]

@@ -1,0 +1,48 @@
+* LaTeX 学习笔记
+
+
+** 中文设置
+参考Web:
+- [[http://blog.csdn.net/ProgramChangesWorld/article/details/51429138][ctex下使用其他中文字体]]  [[http://blog.csdn.net/programchangesworld/article/details/51553683][并排插入图片]] 
+
+*** 设置字体
+- \setCJKfamilyfont{hwxk}{STXingkai}         
+- \newcommand{\huawenxingkai}{\CJKfamily{hwxk}}
+
+
+** 格式设置
+- ctexart 中section左对齐
+  - \CTEXsetup[format={\Large\bfseries}]{section}  
+- 设置边距
+  - \usepackage[top=1in,bottom=1in,left=1.25in,right=1.25in]{geometry}
+- \maketitle   设置页面
+
+
+
+
+** archlinux 安装texlive
+*** 前言
+latex的安装其实感觉非常操蛋,不过还好我用的是archlinux..
+
+之前没有利用好archlinux自己的东西,导致安装浪费了很多时间还没有成功,后来发现archlinux自己已经做好了很多工作…
+
+*** 安装texlive
+sudo pacman -S texlive-core texlive-langchinese texlive-latexextra
+如果没有安装latexextra,这个时候还会出一个神奇的错误,缺少environ.sty,也就是environ.sty not found.
+
+不过事实上,我们即使安装了,也有可能会出现缺少别的一些东西.
+
+*** 安装texlive-localmanager-git
+这个是archlinux的一个脚本,在aur上,需要使用yaourt进行安装:
+
+yaourt texlive-localmanager-git
+*** 使用localmanager安装缺少的部分
+接下来就是缺什么装什么的时候了,使用tllocalmgr进入命令行,之后缺什么install什么就行了 
+大概方法:
+
+tllocalmgr
+之后在manager中,根据缺少的文件名:
+
+install packagename
+texhash
+注意,一定要使用texhash,否则安装没有效果.

@@ -1,0 +1,115 @@
+* 在本文件中，用于记载tensorflow的一般性操作
+
+** 基本语句
+
+tf.reset_default_graph()
+
+tf.constant(3)
+A = tf.placeholder(tf.float32, shape=(None, 3))
+x = tf.Variable(3, name="x")
+y = tf.Variable(4, name="y") 
+theta = tf.Variable(tf.random_uniform([n + 1, 1], -1.0, 1.0), name="theta")
+
+gradients = tf.gradients(mse, [theta])[0]
+
+optimizer = tf.train.GradientDescentOptimizer(learning_rate=learning_rate) 
+training_op = optimizer.minimize(mse)#感觉都不需要算梯度了
+
+optimizer = tf.train.MomentumOptimizer(learning_rate=learning_rate, momentum=0.9)
+
+
+
+training_op = tf.assign(theta, theta - learning_rate * gradients)
+
+
+f = x*x*y + y + 2
+sess = tf.Session()
+sess = tf.InteractiveSession()
+===================================
+with tf.Session() as sess:
+    x.initializer.run() 
+    y.initializer.run() 
+    result = f.eval()
+---------------------------------
+init = tf.global_variables_initializer() # prepare an init node
+with tf.Session() as sess: 
+    init.run() # actually initialize all the variables
+    result = f.eval()
+===================================
+
+
+
+The only difference from a regular Session is that when an InteractiveSes sion is created it automatically sets itself as the default session, so you don’t need a with block (but you do need to close the session manually when you are done with it)
+
+
+
+To evaluate this graph, you need to open a TensorFlow session and use it to initialize the variables and evaluate f
+
+
+A TensorFlow session takes care of placing the operations onto devices such as CPUs and GPUs and running them, and it holds all the variable values.
+
+Instead of manually running the initializer for every single variable, you can use the global_variables_initializer() function. Note that it does not actually perform the initialization immediately, but rather creates a node in the graph that will initialize all variables when it is run:
+
+A TensorFlow program is typically split into two parts: the first part builds a compu‐ tation graph (this is called the construction phase), and the second part runs it (this is the execution phase). The construction phase typically builds a computation graph representing the ML model and the computations required to train it.
+
+
+
+[[./images/5220u5s.png]]
+[[./images/52207Dz.png]]
+[[./images/5220tNC.png]]
+
+
+The inputs and outputs are multidimensional arrays, called tensors (hence the name “tensor flow”). Just like NumPy arrays, tensors have a type and a shape. In fact, in the Python API tensors are simply represented by NumPy ndarrays. They typically contain floats, but you can also use them to carry strings (arbitrary byte arrays).
+
+When using Gradient Descent, remember that it is important to first normalize the input feature vectors, or else training may be much slower. You can do this using TensorFlow, NumPy, Scikit-Learn’s StandardScaler, or any other solution you prefer. The following code assumes that this normalization has already been done.
+
+The gradients() function takes an op (in this case mse) and a list of variables (in this case just theta), and it creates a list of ops (one per variable) to compute the gradi‐ ents of the op with regards to each variable. So the gradients node will compute the gradient vector of the MSE with regards to theta.
+
+
+
+TensorFlow makes saving and restoring a model very easy. Just create a Saver node at the end of the construction phase (after all variable nodes are created); then, in the execution phase, just call its save() method whenever you want to save the model, passing it the session and path of the checkpoint file
+
+Restoring a model is just as easy: you create a Saver at the end of the construction phase just like before, but then at the beginning of the execution phase, instead of ini‐ tializing the variables using the init node, you call the restore() method of the Saver object:
+
+By default the saver also saves the graph structure itself in a second file with the extension .meta. You can use the function tf.train.import_meta_graph() to restore the graph structure. This function loads the graph into the default graph and returns a Saver that can then be used to restore the graph state (i.e., the variable values):
+=======================================================
+reset_graph()
+# notice that we start with an empty graph.
+
+saver = tf.train.import_meta_graph("/tmp/my_model_final.ckpt.meta")  # this loads the graph structure
+theta = tf.get_default_graph().get_tensor_by_name("theta:0") # not shown in the book
+
+with tf.Session() as sess:
+    saver.restore(sess, "/tmp/my_model_final.ckpt")  # this restores the graph's state
+    best_theta_restored = theta.eval() # not shown in the book
+========================================================
+
+By default a Saver saves and restores all variables under their own name, but if you need more control, you can specify which variables to save or restore, and what names to use. For example, the following Saver will save or restore only the theta variable under the name weights:saver = tf.train.Saver({"weights": theta})
+
+
+The first step is to tweak your program a bit so it writes the graph definition and some training stats—for example, the training error (MSE)—to a log directory that TensorBoard will read from. You need to use a different log directory every time you run your program, or else TensorBoard will merge stats from different runs, which will mess up the visualizations. The simplest solution for this is to include a time‐ stamp in the log directory name. Add the following code at the beginning of the program:
+
+
+
+Next, add the following code at the very end of the construction phase:
+mse_summary = tf.summary.scalar('MSE', mse) 
+file_writer = tf.summary.FileWriter(logdir, tf.get_default_graph())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
