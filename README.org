@@ -1,3 +1,7 @@
 * 这里存放我大部分笔记
 
 ** 以后笔记都要备份
+[[file:Picture/%E7%A9%B6%E7%AB%9F%E6%B6%85%E6%A7%83.png][存储地图]]
+** NecessarySkills
+[[file:NecessarySkills/OpenCourseResources.org][OpenCourseResources]]
+
