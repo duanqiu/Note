@@ -1,4 +1,38 @@
+* 本页面是收集一些网络资源
+
+** Github
+- [[https://github.com/marboo/CCBooks][开源著作列表]]
+- [[https://github.com/emacs-china/hello-emacs][emacs 新手入门资料汇集地]]
+- [[https://github.com/jiangxincode/cnblogs][编程相关的 cnblogs]]
+
+
+** weavi
+
+** 科学类网站
+- [[https://www.geogebra.org/][动态数学演示]] 
+- [[http://zh.visualgo.net/zh][算法可视]]
+- [[http://playground.tensorflow.org/][神经网络动态]] 
+
+
+** 编程语言相关 web
+- [[https://www.lfd.uci.edu/~gohlke/pythonlibs/][python 包]]
+- [[http://blog.csdn.net/linzch3/article/details/51942150][pygame 的安装]]
 
 
 
 
+** Org 的博客收集
+- [[https://dirtysalt.github.io/html/index.html][dirtysalt's homepage]] 这是用 org 导出的，专注于内容，而且里面的内容也很丰富
+- [[http://forrestchang.com/14824097554043.html][使用 Emacs Org-mode + GitHub Pages 来写博客]] 一个用 org+github 搭建博客的教程
+- [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]] 
+- [[http://www.zmonster.me/2018/02/28/org-mode-capture.html][很好的 org-capture 的说明,作者其他网页也很好]]
+
+
+** 有用的系列博客
+-[[http://www.fuzihao.org/blog/][切问录]] 很有名的博客文档，争取全部读完，和我的领域有很大重合
+ 
+-[[https://www.cnblogs.com/lovychen/][细雨微光]] 笔记整理得很系统，tensorflo 与 python 系列值得一看
+
+-[[https://zhuanlan.zhihu.com/json-tutorial][从零开始的 JSON 库教程]] 抽空实现一下
+
+-[[https://www.cnblogs.com/skyfsm/][冠军的试炼]] 关于 opencv 与 OCR 的值得一读，抽空实现下
