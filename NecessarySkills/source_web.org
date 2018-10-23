@@ -30,7 +30,7 @@
 
 ** 有用的系列博客
 -[[http://www.fuzihao.org/blog/][切问录]] 很有名的博客文档，争取全部读完，和我的领域有很大重合
- 
+  
 -[[https://www.cnblogs.com/lovychen/][细雨微光]] 笔记整理得很系统，tensorflo 与 python 系列值得一看
 
 -[[https://zhuanlan.zhihu.com/json-tutorial][从零开始的 JSON 库教程]] 抽空实现一下
