@@ -5,8 +5,8 @@
 *** 好用的软件
 - Rolan 桌面收藏软件 很方便
 - ScreenToGif 很好的截屏展示工具
-- ConEmu 替代windows命令行
-- Rufus U盘系统制作工具
+- ConEmu 替代 windows 命令行
+- Rufus U 盘系统制作工具
 - nutstore 坚果云
 
 *** windows 快捷键
@@ -15,28 +15,28 @@
 
 * ARCH linux 软件记录
 *** 好用的软件
-*** emacs相关软件
-****  liveTex的安装
-- 参考web：[[http://www.linuxidc.com/Linux/2016-08/133913.htm][Linux 系统下原版 TeX Live 2016 的安装与配置]] 
+*** emacs 相关软件
+****  liveTex 的安装
+- 参考 web：[[http://www.linuxidc.com/Linux/2016-08/133913.htm][Linux 系统下原版 TeX Live 2016 的安装与配置]] 
 
-*** matlab的安装 
-- 参考web：[[http://blog.csdn.net/hejunqing14/article/details/50265049][linux(x64)下安装Matlab 2015b破解版]] 
-** Git的安装
-- 安装git安装包
-- 运行ssh-keygen -t rsa -C"mail@mail.com" 这个命令产生密钥
-- 将~/.ssh/id_rsa.pub的内容贴到github上
-- 使用命令ssh -T git@github.com来验证是否成功
+*** matlab 的安装 
+- 参考 web：[[http://blog.csdn.net/hejunqing14/article/details/50265049][linux(x64)下安装 Matlab 2015b 破解版]] 
+** Git 的安装
+- 安装 git 安装包
+- 运行 ssh-keygen -t rsa -C"mail@mail.com" 这个命令产生密钥
+- 将~/.ssh/id_rsa.pub 的内容贴到 github 上
+- 使用命令 ssh -T git@github.com 来验证是否成功
 - 成功的标志是 hi xxx. You've successfully authenticated, but GitHub does not provide shell access.
-- 注：linux下不同用户有不同的密钥，要重新设置
-- 运行git config --global user.name "输入你的用户名"
-- 运行git config --global user.email "输入你的邮箱"
+- 注：linux 下不同用户有不同的密钥，要重新设置
+- 运行 git config --global user.name "输入你的用户名"
+- 运行 git config --global user.email "输入你的邮箱"
 - 大功告成
 - archlinux 还是不行 正在想办法
 
-*** 在archlinux下 这样怎么都不行，找了很久，找到如下解决办法
+*** 在 archlinux 下 这样怎么都不行，找了很久，找到如下解决办法
 
-在~/下， touch创建文件 .git-credentials,
-#+BEGIN_SRC vim 
+在~/下，touch 创建文件 .git-credentials,
+#+BEGIN_SRC bash 
 touch .git-credentials
 vim .git-credentials
 #+END_SRC
@@ -44,7 +44,7 @@ vim .git-credentials
     https://{username}:{password}@github.com
 
 终端下执行  git config --global credential.helper store
-可以看到生成~/.gitconfig文件
+可以看到生成~/.gitconfig 文件
 
 ** 字体安装
 *** 对于已经下载好的字体
@@ -54,13 +54,14 @@ fc-list
 查看系统中的中文字体
 fc-list :lang=zh
 
-
+#+BEGIN_SRC bash
 mkdir /usr/share/fonts/xin_fonts
 cp /home/aa.ttf xin_fonts/
 cd xin_fonts/
 mkfontscale 
 mkfontdir
 fc-cache
+#+END_SRC
 *** 网上的字体下载
 # 安装 adobe 无衬线字体
 sudo pacman -S adobe-source-han-sans-otc-fonts
@@ -79,30 +80,30 @@ sudo pacman -S noto-fonts-emoji
 
 ** tmux
 
-配置完以后，重启tmux起效，或者先按C+b，然后输入：，进入命令行模式，在命令行模式下输入：
+配置完以后，重启 tmux 起效，或者先按 C+b，然后输入：，进入命令行模式，在命令行模式下输入：
 
 source-file ~/.tmux.conf
 
-你也可以跟我一样，在配置文件中加入下面这句话，以后改了只需要按前缀+r了。
+你也可以跟我一样，在配置文件中加入下面这句话，以后改了只需要按前缀+r 了。
 
-#将r 设置为加载配置文件，并显示"reloaded!"信息
+#将 r 设置为加载配置文件，并显示"reloaded!"信息
 bind r source-file ~/.tmux.conf \; display "Reloaded!"
-如果输入法在TeXmacs中无法调用，假定您使用fcitx，请在~/.xprofile中加入 
+如果输入法在 TeXmacs 中无法调用，假定您使用 fcitx，请在~/.xprofile 中加入 
 export GTK_IM_MODULE=fcitx 
 export QT_IM_MODULE=fcitx 
 export XMODIFIERS=@im=fcitx 
-使用ibus输入法框架的也类似，将fcitx替换为ibus。 
+使用 ibus 输入法框架的也类似，将 fcitx 替换为 ibus。 
 
 
 ** 输入法的配置
 
-** texmacs无法显示中文 
+** texmacs 无法显示中文 
 1.99.x 版本后，TeXmacs 默认选择 Fandol 字体作为中文字体。但是，Fandol 的字体包可能未随 TeXmacs 一并安装，TeXmacs 未发现该字体会导致“语言”中的 Chinese 不可用。
- 为了解决这个问题，首先需要获得 Fandol 字体文件。如果系统中安装了 TeX Live，Fandol 字体很可能也已经安装，例如：/usr/share/texlive/texmf-dist/fonts/opentype/public/fandol/下的“.otf”文件。如果没有安装 TeX Live，可到 http://www.ctan.org/tex-archive/fonts/fandol 或 http://ctan.mirror.rafal.ca/fonts/fandol.zip 下载Fandol字体包，解压缩后得到 fandol 目录。
-假设你安装的目录和上面一样位于 /home/my_name/software/texmacs，把整个目录中的.otf文件复制到 /home/my_name/software/texmacs/share/TeXmacs/fonts/truetype/fandol下。 
+ 为了解决这个问题，首先需要获得 Fandol 字体文件。如果系统中安装了 TeX Live，Fandol 字体很可能也已经安装，例如：/usr/share/texlive/texmf-dist/fonts/opentype/public/fandol/下的“.otf”文件。如果没有安装 TeX Live，可到 http://www.ctan.org/tex-archive/fonts/fandol 或 http://ctan.mirror.rafal.ca/fonts/fandol.zip 下载 Fandol 字体包，解压缩后得到 fandol 目录。
+假设你安装的目录和上面一样位于 /home/my_name/software/texmacs，把整个目录中的.otf 文件复制到 /home/my_name/software/texmacs/share/TeXmacs/fonts/truetype/fandol 下。 
 
 在终端下执行 texmacs --setup 将重设参数并启动 TeXmacs，这时“语言”选项下中文即为可用状态。 
 
 您也可以通过系统添加字体（2016/03/08） 
-Linux下，在目录 ~/.fonts 下放置想用的 .ttf 文件即可，TeXmacs 会搜索到它们。 
+Linux 下，在目录 ~/.fonts 下放置想用的 .ttf 文件即可，TeXmacs 会搜索到它们。 
 例如，您想使用 Windows 下的“仿宋”字体或“Times New Roman”，在 c:/windows/fonts 下找到相应的.ttc或.ttf文件，复制到 ~/.fonts 即可。
