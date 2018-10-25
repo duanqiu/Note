@@ -63,6 +63,7 @@ mkfontdir
 fc-cache
 #+END_SRC
 *** 网上的字体下载
+#+BEGIN_SRC 
 # 安装 adobe 无衬线字体
 sudo pacman -S adobe-source-han-sans-otc-fonts
 
@@ -74,6 +75,8 @@ sudo pacman -S noto-fonts noto-fonts-cjk
 
 # 安装 noto emoji 表情包
 sudo pacman -S noto-fonts-emoji
+#+END_SRC
+
 =====================================
 其中，adobe 字体可用于终端模拟器和文本编辑器等大部分桌面应用程序。而 noto 字体被指定为 icecat 浏览器的依赖组建，故由 noto 中文来呈现网页内容。如果你使用 icecat 以外的浏览器，或许需要留意它对字体的要求。
 
@@ -106,4 +109,4 @@ export XMODIFIERS=@im=fcitx
 
 您也可以通过系统添加字体（2016/03/08） 
 Linux 下，在目录 ~/.fonts 下放置想用的 .ttf 文件即可，TeXmacs 会搜索到它们。 
-例如，您想使用 Windows 下的“仿宋”字体或“Times New Roman”，在 c:/windows/fonts 下找到相应的.ttc或.ttf文件，复制到 ~/.fonts 即可。
+例如，您想使用 Windows 下的“仿宋”字体或“Times New Roman”，在 c:/windows/fonts 下找到相应的.ttc 或.ttf 文件，复制到 ~/.fonts 即可。
