@@ -36,3 +36,5 @@
 -[[https://zhuanlan.zhihu.com/json-tutorial][从零开始的 JSON 库教程]] 抽空实现一下
 
 -[[https://www.cnblogs.com/skyfsm/][冠军的试炼]] 关于 opencv 与 OCR 的值得一读，抽空实现下
+
+- [[https://blog.csdn.net/itplus/article/details/21896453][皮果提-牛顿法与拟牛顿法学习笔记]] 关于牛顿法，公式很详细，应该仔细推导几遍

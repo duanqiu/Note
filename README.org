@@ -6,4 +6,5 @@
 
 ** NecessarySkills
 [[file:NecessarySkills/OpenCourseResources.org][OpenCourseResources]]
-
+[[file:NecessarySkills/emacs.org][emacs]]
+[[file:NecessarySkills/convex_way.org]]
