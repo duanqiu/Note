@@ -1,0 +1,47 @@
+* 本文件用于记录 pytorch 的相关内容
+
+
+
+** tips
+*** Remember that you must call model.eval() to set dropout and batch normalization layers to evaluation mode before running inference. Failing to do this will yield inconsistent inference results.
+*** Notice that the load_state_dict() function takes a dictionary object, NOT a path to a saved object. This means that you must deserialize the saved state_dict before you pass it to the load_state_dict() function. For example, you CANNOT load using model.load_state_dict(PATH).
+#+BEGIN_SRC python
+# Save:
+torch.save(model.state_dict(), PATH)
+# Load:
+model = TheModelClass(*args, **kwargs)
+model.load_state_dict(torch.load(PATH))
+model.eval()
+## Save/Load Entire Model
+# Save:
+torch.save(model, PATH)
+# Load:
+# Model class must be defined somewhere
+model = torch.load(PATH)
+model.eval()
+#+END_SRC
+*** SAVING & LOADING A GENERAL CHECKPOINT FOR INFERENCE AND/OR RESUMING TRAINING 
+#+BEGIN_SRC python
+# Save:
+torch.save({
+            'epoch': epoch,
+            'model_state_dict': model.state_dict(),
+            'optimizer_state_dict': optimizer.state_dict(),
+            'loss': loss,
+            ...
+            }, PATH)
+# Load:
+model = TheModelClass(*args, **kwargs)
+optimizer = TheOptimizerClass(*args, **kwargs)
+
+checkpoint = torch.load(PATH)
+model.load_state_dict(checkpoint['model_state_dict'])
+optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+epoch = checkpoint['epoch']
+loss = checkpoint['loss']
+
+model.eval()
+# - or -
+model.train()
+#+END_SRC
+*** be sure to use the .to(torch.device('cuda')) function on all model inputs to prepare the data for the model. Note that calling my_tensor.to(device) returns a new copy of my_tensor on GPU. It does NOT overwrite my_tensor. Therefore, remember to manually overwrite tensors: my_tensor = my_tensor.to(torch.device('cuda'))

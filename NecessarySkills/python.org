@@ -1,10 +1,60 @@
-* python使用笔记
-
-
-** 用conda创建一个新的环境空间
+* python 使用笔记
+** 用 conda 创建一个新的环境空间
 1) conda create -n env_name python=2
-2) 也可以使用conda create --name your_env_name python=3.5 numpy scipy
-3) conda list查看安装了那些包
-4) source activate env_name 激活环境 windows中不用source
+2) 也可以使用 conda create --name your_env_name python=3.5 numpy scipy
+3) conda list 查看安装了那些包
+4) source activate env_name 激活环境 windows 中不用 source
 5) source deactivate laplace 关闭环境
 6) conda env export -n <env-name>导出环境
+
+** numpy 
+
+*** random 类别
+
+numpy.random.random()　生成随机浮点数
+默认为生成一个随机的浮点数，范围是在 0.0~1.0 之间，也可以通过参数 size 设置返回数据的 size;
+
+numpy.random.randint()　产生随机整数
+API: randint(low, high=None, size=None, dtype=’l’) 
+numpy.random.randint()随机生一个整数 int 类型，可以指定这个整数的范围
+
+numpy.random.normal() 　高斯分布随机数
+API: normal(loc=0.0, scale=1.0, size=None) 
+loc：均值，scale：标准差，size：抽取样本的 size
+
+numpy.random.randn()　标准正态分布随机数
+numpy.random.randn(d0, d1, …, dn)函数： 
+从标准正态分布中返回一个(d0*d1* …* dn)维样本值
+
+numpy.random.rand()　生成[0, 1)间随机数
+numpy.random.rand(d0, d1, …, dn)函数： 
+生成一个(d0*d1* …* dn)维位于[0, 1)中随机样本
+
+numpy.random.shuffle()　随机打乱序列
+numpy.random.shuffle() 将序列的所有元素随机排序 
+<传入参数可以是一个序列或者元组>
+
+numpy.random.choice()　随机选取序列的一个元素
+numpy.random.choice()可以从序列(字符串、列表、元组等)中随机选取，返回一个列表，元组或字符串的随机项。
+
+numpy.random.binomial()　二项分布采样
+numpy.random.RandomState.binomial(n, p, size=None)表示对一个二项分布进行采样,s 为成功次数 
+ P(N)=CsnPs(1−P)n−s P(N)=CnsPs(1−P)n−s
+size:采样的次数,n p 即式中的 n p;函数的返回值表示 n 中发生/成功的次数 s. 
+如：当 n=5,p=0.2,size=1000，即 5 个事件每个发生的概率为 0.2，则 5 个同时发生的概率，采样 size=1000 次：
+
+ P(p=0.2)=C55p5(1−p)0=0.32
+
+
+numpy.random.RandomState()　指定种子值
+numpy.random.RandomState()指定种子值（指定种子值是为了使同样的条件下每次产生的随机数一样，避免程序调试时由随机数不同而引起的问题） 
+如不设置种子值时,np.random.randint(8)可能产生 0-7 内的任意整数，且每次产生的数字可能是任意一种． 
+而设置种子值后,np.random.RandomState(0).randint(8)可能产生 0-7 内的任意整数，但种子值不变时每次运行程序产生的数字一样．
+
+
+** 取迭代器一次的书角 
+#+BEGIN_SRC python
+ next(iter(test_loader))
+#+END_SRC
+
+ 

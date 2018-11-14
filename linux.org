@@ -1,0 +1,32 @@
+* 本文档用于记录 linux 使用过程中遇到的问题
+
+** 移动硬盘无法写入问题
+
+NTFS 格式的移动硬盘,用普通的 mount 无法正常工作
+可以使用 ntfs-3g /dev/sdb1 /mnt/udisk/ 进行挂载 
+
+** archlinux 安装打印机 
+用 pacman -S 安装 cups, ghostscript, gsfonts, hpoj, hplip 
+$ sudo systemctl restart avahi-daemon.service
+$ sudo systemctl start cups-browsed.service  
+在浏览器中打开 http://localhost:631 
+选择 Administration –> Add Printer –> Add Printer 
+选择 LPD/LPR 主机或打印机 –> Continue 
+然后输入打印机的 ip 地址，这里是 1.1.1.1 
+然后之后就选择你的打印机型号，名字什么的自己取，设置好后会提示成功，之后就可以用打印机了！
+** pacman 的用法
+#+BEGIN_SRC bash
+pacman -S package_name #安装软件包
+pacman -R package_name #删除软件包
+pacman -Rs package_name #顺便删除软件包相关依赖
+pacman -Syu #升级系统中的所有包
+pacman -Ss package #查询软件包
+pacman -Qs package #查询已安装的包
+pacman -Qi package #显示查找的包的信息
+pacman -Ql package #显示你要找的包的文件都安装的位置 
+pacman -Sw package #下载但不安装包
+pacman -U /path/package.pkg.tar.gz #安装本地包
+pacman -Scc #清理包缓存，下载的包会在/var/cache 这个目录
+pacman -Sf pacman #重新安装包
+#+END_SRC
+

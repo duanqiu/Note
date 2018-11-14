@@ -12,6 +12,10 @@ filename=$(basename "$fullfile")
 extension="${filename##*.}"
 filename="${filename%.*}"
 #+END_SRC
+**** 判断变量是否在数值中 
+#+BEGIN_SRC shell
+if echo "${a[@]}" | grep -w "$target" &>/dev/null; then echo "in"; fi
+#+END_SRC
 *** 使用说明
 基于 Pattern Matching 的子串替换
 ${STR/$OLD/$NEW}

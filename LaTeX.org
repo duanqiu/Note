@@ -1,0 +1,39 @@
+* this document is main to record tips about latex 
+
+
+** algorithm.sty not found error in LaTeX
+If you use the algorithm package in your LaTeX document, you might get this error on compiling it:
+
+LaTeX Error: File `algorithm.sty' not found.
+On Ubuntu, this LaTeX package is bundled in the texlive-sciencepackage. Install this package and the error should be gone:
+
+$ sudo apt-get install texlive-science
+
+
+
+
+$\alpha$
+
+
+$a_{1}$
+\begin{equation}
+\sum\limits_{i=1}^n(单项评分_i * 权重)
+\end{equation}
+
+
+\begin{equation}
+\frac{1^p+2^p+\cdot\cdot\cdot+n^p}{n^{1+p}}
+\end{equation}
+
+
+\begin{equation}
+\stackrel{abc}{\longrightarrow}
+\end{equation}
+\begin{equation}
+    Y=\left\{
+    \begin{aligned}
+    +1 & , & if & & X \geq \theta \\
+    -1 & , & if & & X < \theta
+    \end{aligned}
+    \right.
+    \end{equation}
