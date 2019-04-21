@@ -1,9 +1,9 @@
 * Emacs 
 神一样的编辑器
-参考 web：[[https://github.com/emacs-china/hello-emacs][emacs 新手入门资料汇集地]] 
+参考  web：[[https://github.com/emacs-china/hello-emacs][emacs 新手入门资料汇集地]] 
 
 ** 快捷键
-- C-e，回车 向下新插入一行(这就是将光标移到结尾然后插入 enter)
+- C-e，回车 向下新插入一行(这就是将光标移到结尾然后插入  enter)
 - C-c C-x C-v 显示图片
 
 [[file:Picture/emacs1.png]]
@@ -12,63 +12,63 @@
 
 
 ** magit
-    - 添加文件 先创建并修改 然后在 magit-status 里面按 s 键 加入 track
-    - 提交 使用命令 magit-status 后加入注释后要按 C-c C-c 结束注释 然后才添加完成
+    - 添加文件 先创建并修改 然后在  magit-status 里面按  s 键 加入  track
+    - 提交 使用命令  magit-status 后加入注释后要按  C-c C-c 结束注释 然后才添加完成
     - http://www.fidding.me/article/16 这个文档里面写的很详细
 
 ** org-mode
-参考网站 [[http://orgmode.org/manual/index.html][The Org Manual]] [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-mode 入门教程]] [[https://github.com/tshwangq/awesome-smoking][用 org mode 实践戒烟]]  [[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-9][Org-mode 简明手册]] [[https://github.com/marboo/orgmode-cn][Emacs 的 Org Mode – 用纯文本书写人生]] [[https://github.com/marboo/orgmode-cn/blob/master/org.org][Org-Manual 7.8]] [[http://holbrook.github.io/2012/04/12/emacs_orgmode_editor.html][org-mode，最好的文档编辑利器]] [[https://segmentfault.com/a/1190000008313904][用 Org-Mode 和 Jekyll 写博客]] 
+参考网站 [[http://orgmode.org/manual/index.html][The Org Manual]] [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-mode 入门教程]] [[https://github.com/tshwangq/awesome-smoking][用  org mode 实践戒烟]]  [[http://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-9][Org-mode 简明手册]] [[https://github.com/marboo/orgmode-cn][Emacs 的  Org Mode – 用纯文本书写人生]] [[https://github.com/marboo/orgmode-cn/blob/master/org.org][Org-Manual 7.8]] [[http://holbrook.github.io/2012/04/12/emacs_orgmode_editor.html][org-mode，最好的文档编辑利器]] [[https://segmentfault.com/a/1190000008313904][用  Org-Mode 和  Jekyll 写博客]] 
 
-- 设置 agenda 的目录
+- 设置  agenda 的目录
 (with-eval-after-load 'org
-(setq org-agenda-files '("~/Myfile/Org"))) ;; 如果 org-mode 没有生效 ，就用 C-h v 来查看 org-agenda-files
-- 插入图片 C-c C-l
+(setq org-agenda-files '("~/Myfile/Org"))) ;; 如果  org-mode 没有生效 ，就用  C-h v 来查看  org-agenda-files
+- 插入图片  C-c C-l
 *** 一般快捷键
 - C-c C-x f 添加注脚
 - C-c C-x C-f 强调文字
 - C-c C-c 可以跳转到注脚，也可以跳到正文
-- <s 然后 TAB 就是注释
+- <s 然后  TAB 就是注释
 *** org-table
-   - 构造表头: |Name|Phone|Age 然后紧接着输入 C-c <RET>.
+   - 构造表头: |Name|Phone|Age 然后紧接着输入  C-c <RET>.
    - C-c C-c  对表格进行重对齐操作但不移动光标的位置
    - M-a 移动到光标当前域的开头位置
    - M-e 移动到光标当前域的结尾位置
    - M-<left>  移动当前列到左方(与左列交换位置)
    - M-<right> 移动当前列到右方(与右列交换位置)
    - M-<up> (org-table-move-row-up)
-   - 在表中输入 =$3+$4 然后按 C-u C-c C-c 可自动求和
+   - 在表中输入 =$3+$4 然后按  C-u C-c C-c 可自动求和
    - C-c ^ 排序功能
    - C-c | 通过输入大小的方式插入表格
 *** org 链接
    - \[[链接地址][链接内容]\]  注：\为自己加入的
    - \[[http://orgmode.org/orgguide.pdf][grgguid.pdf]\]
-   - \[[file:/home/maple/图片/test.jpg][a picture]\]
-   - \[[file:/home/maple/图片/test.jpg]\] 然后 C-c C-x C-v 显示
+   - \[[file:/home/maple/图片/ test.jpg][a picture]\]
+   - \[[file:/home/maple/图片/ test.jpg]\] 然后  C-c C-x C-v 显示
 *** org-tudo
    - =C-c C-t= 改变当前标签的状态
    - =C-u C-c C-t= 选择当前标签的状态
-   - =S-<right> / S-<left>=  循环选择下一个/上一个 TODO 状态
-   - =C-c / t=  在一个 sparse tree 中查看 TODO 事项.
-   - =C-u C-c / t= 搜索指定的 TODO 状态
+   - =S-<right> / S-<left>=  循环选择下一个/上一个  TODO 状态
+   - =C-c / t=  在一个  sparse tree 中查看  TODO 事项.
+   - =C-u C-c / t= 搜索指定的  TODO 状态
    - =C-TAB= 同级* =M-TAB= 同级子标签 - 1) 等
-   - =C-c C-c= 改变 checkbox 状态
-   - =C-c ,= 设置优先级（方括号里的 ABC）
-   - =M-S-RET= 插入同级 TODO 标签
+   - =C-c C-c= 改变  checkbox 状态
+   - =C-c ,= 设置优先级（方括号里的  ABC）
+   - =M-S-RET= 插入同级  TODO 标签
    - =C-c C-q=  为标题添加标签
    - =C-c / m= 生成带标签的树
    - =C-c .= 出现日历 可插入时间
    - =C-c C-d= deadline
    - =C-c C-s= starttime
-   - =C-c C-c= 改变 checkbox 状态
+   - =C-c C-c= 改变  checkbox 状态
    - 插入`[/ ]`或`[% ]` 可统计子标签的完成度
-   - =C-c a= 进入 agenda view
+   - =C-c a= 进入  agenda view
    - =M-S RET= 添加带有[ ]的子任务
-   - 更改 todo 关键字
+   - 更改  todo 关键字
      1) (setq org-todo-keywords '((sequence "TODO" "FEEDBACK" "VERIFY" "|" "DONE" "DELEGATED")))
      2) 这个`|`竖线划分了哪些状态是属于未完结状态,哪些状态是出于已完结状态. 如果你没有提供分隔线,那么最后那个状态被认为是已完结状态.
-     3) 命令`C-c C-t`切换状态时,会先从 TODO 切换到 FEEDBACK,然后是 FEEDBACK,最后是 DONE 和 DELEGATED 状态. 你也可以使用数字前缀来快速选择特定的状态,例如`C-3 C-c C–t`会使得状态立即编程 VERIFY. 你也可以使用`S-<left>`来在这个序列中回退状态.
+     3) 命令` C-c C-t`切换状态时,会先从  TODO 切换到  FEEDBACK,然后是  FEEDBACK,最后是  DONE 和  DELEGATED 状态. 你也可以使用数字前缀来快速选择特定的状态,例如` C-3 C-c C–t`会使得状态立即编程  VERIFY. 你也可以使用` S-<left>`来在这个序列中回退状态.
      4) (setq org-todo-keywords '((type "Fred" "Sara" "Lucy" "|" "DONE")))
-     5) 它们被用来标示不同的类型  它也支持使用命令`C-c C-t`[
+     5) 它们被用来标示不同的类型  它也支持使用命令` C-c C-t`[
    - 对当前任务记时
      1) =C-c C-x C-i= (org-clock-in) 开始对当前任务计时
      2) =C-c C-x C-o= (org-clock-out) 结束计时. 
@@ -79,7 +79,7 @@
      4) `+时间间隔`则表示改习惯不是一个经常性的事项,它可以在之前积压未办之事,然后在未来补完它(比如补写周报)
      5) 改习惯也可以使用类似`.+2d/3d`这样的符号标示最小/最大的间隔时间. `.+2d/3d`的意思是,你希望至少每三天做一次这个工作,但是最多每两天做一次这个工作
      6) 蓝色：表示当天任务没有完成；绿色：表示当天任务已经完成；黄色：表示任务在第二天就会过期了；红色：表示工作在当天已经延误了。
-     7) DEADLINE: <2005-10-01 Sat +1m -3d>. +1m 就是 repeater. 意思是每个月重复一次. 如果你需要在一个 DEADLINE 中同时表明 repeater 和指定预警期的话,则 repeater 需要放在前面,预警期放在后面
+     7) DEADLINE: <2005-10-01 Sat +1m -3d>. +1m 就是  repeater. 意思是每个月重复一次. 如果你需要在一个  DEADLINE 中同时表明  repeater 和指定预警期的话,则  repeater 需要放在前面,预警期放在后面
 
 *** org-capture
 - [[https://segmentfault.com/a/1190000000456314][org-mode remeber]]
@@ -101,10 +101,10 @@
    "* Note %?\n  %i\n  %a")))
 #+END_SRC
 ** org-pomodoro
-** 使用 YASnippet
-- 参考 web：[[https://www.cnblogs.com/liweilijie/archive/2012/12/30/2840081.html][使用 YASnippet]]
-  - 安装 yasnippet
-  - (yas-global-mode 1) 激活 yasmippets
+** 使用  YASnippet
+- 参考  web：[[https://www.cnblogs.com/liweilijie/archive/2012/12/30/2840081.html][使用  YASnippet]]
+  - 安装  yasnippet
+  - (yas-global-mode 1) 激活  yasmippets
   - yas/new-snippet
 #+BEGIN_SRC 
 　 # -*- mode: snippet -*-
@@ -121,18 +121,18 @@
 
 #+END_SRC
   - C-c C-c 选择要使用的模型
-  - 在要输入的地方打出 key 然后按 tab 键即可
+  - 在要输入的地方打出  key 然后按  tab 键即可
   - 要设置他永久有效，还要在配置文件中添加（require yasnippet） (yas/initialize)
 
 ** 包管理命令
 - customize-grou
 ** 编码问题
-- 设置默认 encoding (set-language-environment  "utf8")
+- 设置默认  encoding (set-language-environment  "utf8")
 *** <2018-04-03 Tue> 
-在 archlinux 上使用 Dired 发现文件名乱码而内容显示正常多番尝试下 最后  (setq file-name-coding-system 'utf-8)解决了乱码问题 
-唉 emacs 搞得我好累啊！！！
+在  archlinux 上使用  Dired 发现文件名乱码而内容显示正常多番尝试下 最后  (setq file-name-coding-system 'utf-8)解决了乱码问题 
+唉  emacs 搞得我好累啊！！！
 ** 截图设置
-先在电脑上安装 scrot 程序员 然后将下列代码加入到程序中
+先在电脑上安装  scrot 程序员 然后将下列代码加入到程序中
 #+BEGIN_SRC lisp
  
 (defun my-screenshot ()
@@ -156,13 +156,13 @@
 (spacemacs/set-leader-keys "op" 'my-screenshot)
 #+END_SRC
 
-** spacemacs 使用 jupyter notebook
+** spacemacs 使用  jupyter notebook
 
-1) 在 emacs 的 layers 中加入 ipython-notebook 其中会安装 ein 来连接 jupyter
-2) 在命令行中设置 jupyter 的密码  jupyter-notebook password
-3) 在 emacs 中使用 M-x ein:notebooklist-login 来输入密码
-4) 在 emacs 中使用 M-x ein:notebooklist-open 来登录 大功告成
-** spacemacs 快捷键（非 space）
+1) 在  emacs 的  layers 中加入  ipython-notebook 其中会安装  ein 来连接  jupyter
+2) 在命令行中设置  jupyter 的密码  jupyter-notebook password
+3) 在  emacs 中使用  M-x ein:notebooklist-login 来输入密码
+ 4) 在  emacs 中使用  M-x ein:notebooklist-open 来登录 大功告成
+** spacemacs 快捷键（非  space）
 1) 跳转
  i I（一个光标前，一个光标后）
 a A（一个单词后面，一个行尾）
