@@ -46,6 +46,8 @@
    - \[[file:/home/maple/图片/ test.jpg]\] 然后  C-c C-x C-v 显示
 *** org-tudo
    - =C-c C-t= 改变当前标签的状态
+   - =C-x u= 撤销快捷键 
+   - =C-x o= 将光标切换到其他窗口
    - =C-u C-c C-t= 选择当前标签的状态
    - =S-<right> / S-<left>=  循环选择下一个/上一个  TODO 状态
    - =C-c / t=  在一个  sparse tree 中查看  TODO 事项.
