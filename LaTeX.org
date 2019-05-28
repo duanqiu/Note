@@ -1,4 +1,4 @@
-* this document is main to record tips about latex 
+#TITLE: this document is main to record tips about latex 
 
 
 ** algorithm.sty not found error in LaTeX
