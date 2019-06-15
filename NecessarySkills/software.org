@@ -1,13 +1,12 @@
 * chrome 
-平常用全屏  使用vim来操纵网页
+平常用全屏  使用 vim 来操纵网页
 
 Alt+F4 或 Ctrl+Shift+W：关闭当前窗口。
 Ctrl+W 或 Ctrl+F4：关闭当前标签页或弹出式窗口。
 
-
 * matlab
 
-** 讲matlab的默认编码换位utf-8编码
+** 讲 matlab 的默认编码换位 utf-8 编码
 
 
 在命令窗口输入命令：
@@ -15,9 +14,9 @@ Ctrl+W 或 Ctrl+F4：关闭当前标签页或弹出式窗口。
 feature('locale')
 可以看到多是用 GBK 进行编码。
 
-如果想以 utf-8 编码，而不是 GBK 编码的话，请找到MATLAB的安装路径，我的是D:\MATLAB\R2016b。找到bin目录下的 locale 数据库文件 lcdata.xml，即完整路径：D:\MATLAB\R2016b\bin\lcdata.xml
+如果想以 utf-8 编码，而不是 GBK 编码的话，请找到 MATLAB 的安装路径，我的是 D:\MATLAB\R2016b。找到 bin 目录下的 locale 数据库文件 lcdata.xml，即完整路径：D:\MATLAB\R2016b\bin\lcdata.xml
 
-打开并删除lcdata.xml中的：
+打开并删除 lcdata.xml 中的：
 
 <encoding name=”GBK”>  
   < encoding_alias name=”936”>  
@@ -38,34 +37,33 @@ feature('locale')
 * python
 
 ** 改为豆瓣源
-所以我们可以在Linux编辑~/.pip/pip.conf或者在Windows下编辑%HOME%\pip\pip.ini，内容如下：
+所以我们可以在 Linux 编辑~/.pip/pip.conf 或者在 Windows 下编辑%HOME%\pip\pip.ini，内容如下：
 [global] 
 index-url = http://pypi.douban.com/simple 
-这样就是将默认的pypi源改成豆瓣源了，而不用每次pip install的时候通过-i参数指定。
-
+这样就是将默认的 pypi 源改成豆瓣源了，而不用每次 pip install 的时候通过-i 参数指定。
 
 * vim 
 
 ** vim 快捷键
 一：光标命令    
-    左h 上j 下k 右l
-    ：goto n 表示跳转到文本的第n个字符
-    ：n      表示跳到第n行
-    nG  n为行数，该命令立即使光标跳到指定行；n为空，光标跳到文件最后一行。
+    左 h 上 j 下 k 右 l
+    ：goto n 表示跳转到文本的第 n个字符
+    ：n      表示跳到第 n行
+    nG  n 为行数，该命令立即使光标跳到指定行；n为空，光标跳到文件最后一行。
     Ctrl+G——光标所在位置的行数和列数报告
-    w或b——使光标向前或向后跳过一个单词
+    w 或b——使光标向前或向后跳过一个单词
     vim +n filename 表示进入文件后直接定位到某行
 二：编辑命令
-      v命令：表示编辑模式下可以上下选中几行进行编辑
+      v 命令：表示编辑模式下可以上下选中几行进行编辑
    (1)剪切:
       dd 表示剪切一行
       d$ 剪切当前行光标所在的位置到行尾
       d^ 剪切当前行光标所在的位置到行首
       ndd 表示从当前行+下两行被剪切了
-      ：1,10 m 20 剪切1到10行到20行
+      ：1,10 m 20 剪切 1到 10 行到 20 行
    （2）复制：
        yy/Y 表示复制游标所在行的整行
-       2yy或y2y复制两行
+       2yy 或y2y 复制两行
        y$/y0 复制到行尾，不含游标所在处字元
        y^    复制至行首，含游标所在处字元
        yG    复制至档尾
@@ -73,22 +71,22 @@ index-url = http://pypi.douban.com/simple
        p（小） 当前行的后面
        P（大） 当前行的前面
 
-** vim set中的 命令大全
-进入vim的命令：      
+** vim set 中的 命令大全
+进入 vim 的命令：      
 
     vim filename :打开或新建文件，并将光标置于第一行首  
 
-    vim +n filename ：打开文件，并将光标置于第n行首  
+    vim +n filename ：打开文件，并将光标置于第 n行首  
 
     vim + filename ：打开文件，并将光标置于最后一行首  
 
-    vim +/pattern filename：打开文件，并将光标置于第一个与pattern匹配的串处  
+    vim +/pattern filename：打开文件，并将光标置于第一个与 pattern 匹配的串处  
 
-    vim -r filename ：在上次正用vim编辑时发生系统崩溃，恢复filename  
+    vim -r filename ：在上次正用 vim 编辑时发生系统崩溃，恢复 filename  
 
     vim filename….filename ：打开多个文件，依次编辑  
 
-Vim配置：  
+Vim 配置：  
 
     all：列出所有选项设置情况  
 
@@ -104,13 +102,13 @@ Vim配置：
 
     terse：显示简短的警告信息  
 
-    warn：在转到别的文件时若没保存当前文件则显示NO write信息  
+    warn：在转到别的文件时若没保存当前文件则显示 NO write 信息  
 
     nomagic：允许在搜索模式中，使用前面不带“\”的特殊字符  
 
-    nowrapscan：禁止vi在搜索到达文件两端时，又从另一端开始  
+    nowrapscan：禁止 vi 在搜索到达文件两端时，又从另一端开始  
 
-    mesg：允许vi显示其他用户用write写到自己终端上的信息  
+    mesg：允许 vi 显示其他用户用 write 写到自己终端上的信息  
 
     :set number / set nonumber :显示/不显示行号  
 
@@ -124,23 +122,23 @@ Vim配置：
 
     :set nu        #显示行号  
 
-    :set tabstop=4    #设置tab大小  
+    :set tabstop=4    #设置 tab 大小  
 
     :set softtabstop=4  
 
     :set autoindent    #自动缩进  
 
-    :set cindent    #C语言格式里面的自动缩进  
+    :set cindent    #C 语言格式里面的自动缩进  
 
 移动光标：  
 
-    上:k nk:向上移动n行  
+    上:k nk:向上移动 n行  
 
-    下:j nj:向下移动n行  
+    下:j nj:向下移动 n行  
 
-    左:h nh:向左移动n列  
+    左:h nh:向左移动 n列  
 
-    右:l nl:向右移动n列  
+    右:l nl:向右移动 n列  
 
     space：光标右移一个字符  
 
@@ -148,11 +146,11 @@ Vim配置：
 
     Enter ：光标下移一行  
 
-    w或W ：光标右移一个字至字首  
+    w 或W ：光标右移一个字至字首  
 
-    b或B ：光标左移一个字至字首  
+    b 或B ：光标左移一个字至字首  
 
-    e或E ：光标右移一个字至字尾  
+    e 或E ：光标右移一个字至字尾  
 
     ) ：光标移至句尾  
 
@@ -162,7 +160,7 @@ Vim配置：
 
     {：光标移至段落结尾  
 
-    n$：光标移至第n行尾  
+    n$：光标移至第 n行尾  
 
     H ：光标移至屏幕顶行  
 
@@ -176,17 +174,17 @@ Vim配置：
 
     $：光标移至当前行尾  
 
-    gg可以移到第一行  
+    gg 可以移到第一行  
 
-    G移到最后一行  
+    G 移到最后一行  
 
-    f<a>:移动光标到当前行的字符a上  
+    f<a>:移动光标到当前行的字符 a上  
 
     F:相反  
 
     %：移动到与制匹配的括号上去（），{}，[]，<>等。  
 
-    nG:移动到第n行上  
+    nG:移动到第 n行上  
 
     G:到最后一行  
 
@@ -200,7 +198,7 @@ Vim配置：
 
     Ctrl＋b：向文件首翻一屏  
 
-    nz：将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部  
+    nz：将第 n行滚至屏幕顶部，不指定 n时将当前行滚至屏幕顶部  
 
 插入文本类命令：
 
@@ -218,23 +216,23 @@ Vim配置：
 
     r：替换当前字符  
 
-    R：替换当前字符及其后的字符，直至按ESC键  
+    R：替换当前字符及其后的字符，直至按 ESC 键  
 
     s：从当前光标位置处开始，以输入的文本替代指定数目的字符  
 
     S：删除指定数目的行，并以所输入文本代替之  
 
-    ncw或nCW：修改指定数目的字  
+    ncw 或nCW：修改指定数目的字  
 
     nCC：修改指定数目的行  
 
 删除命令：
 
-    x或X：删除一个字符，x删除光标后的，而X删除光标前的  
+    x 或X：删除一个字符，x删除光标后的，而 X删除光标前的  
 
     dw：删除一个单词  
 
-    dnw:删除n个单词  
+    dnw:删除 n个单词  
 
     dne:也可，只是删除到单词尾  
 
@@ -244,17 +242,17 @@ do：删至行首
 
     dd：删除一行  
 
-    ndd：删除当前行及其后n-1行  
+    ndd：删除当前行及其后 n-1 行  
 
-    dnl:向右删除n个字母  
+    dnl:向右删除 n个字母  
 
-    dnh:向左删除n个字母  
+    dnh:向左删除 n个字母  
 
-    dnj:向下删除n行  
+    dnj:向下删除 n行  
 
-    dnk:向上删除n行  
+    dnk:向上删除 n行  
 
-    cnw[word]:将n个word改变为word  
+    cnw[word]:将 n个 word 改变为 word  
 
     C$:改变到行尾  
 
@@ -264,17 +262,17 @@ do：删至行首
 
 复制粘贴：  
 
-    p：粘贴用x或d删除的文本  
+    p：粘贴用 x或 d删除的文本  
 
-    ynw：复制n个单词  
+    ynw：复制 n个单词  
 
     yy：复制一行  
 
-    ynl:复制n个字符  
+    ynl:复制 n个字符  
 
     y$:复制当前光标至行尾处  
 
-    nyy:拷贝n行  
+    nyy:拷贝 n行  
 
 撤销：  
 
@@ -284,61 +282,61 @@ do：删至行首
 
 搜索及替换命令 :  
 
-    /pattern：从光标开始处向文件尾搜索pattern  
+    /pattern：从光标开始处向文件尾搜索 pattern  
 
-    ?pattern：从光标开始处向文件首搜索pattern  
+    ?pattern：从光标开始处向文件首搜索 pattern  
 
     n：在同一方向重复上一次搜索命令  
 
     N：在反方向上重复上一次搜索命令  
 
-    cw【newword】:替换为newword  
+    cw【newword】:替换为 newword  
 
     n: 继续查找  
 
     .：执行替换  
 
-    :s/p1/p2/g：将当前行中所有p1均用p2替代,g表示执行用c表示需要确认  
+    :s/p1/p2/g：将当前行中所有 p1 均用 p2 替代,g 表示执行用 c表示需要确认  
 
-    :n1,n2 s/p1/p2/g：将第n1至n2行中所有p1均用p2替代  
+    :n1,n2 s/p1/p2/g：将第 n1 至n2 行中所有 p1 均用 p2 替代  
 
-    :g/p1/s//p2/g：将文件中所有p1均用p2替换  
+    :g/p1/s//p2/g：将文件中所有 p1 均用 p2 替换  
 
-    :1,$ s/string1/string2/g:在全文中将string1替换为string2  
+    :1,$ s/string1/string2/g:在全文中将 string1 替换为 string2  
 
 书签：  
 
-    m[a-z]:在文中做标记，标记号可为a-z的26个字母  
+    m[a-z]:在文中做标记，标记号可为 a-z 的26 个字母  
 
-    `a：移动到标记a处  
+    `a：移动到标记 a处  
 
 visual 模式：  
 
-    v:进入visual 模式  
+    v:进入 visual 模式  
 
-    V:进入行的visual 模式  
+    V:进入行的 visual 模式  
 
-    ctrl+v:进如块操作模式用o和O改变选择的边的大小  
+    ctrl+v:进如块操作模式用 o和 O改变选择的边的大小  
 
-    在所有行插入相同的内容如include<，操作方法如下：  
+    在所有行插入相同的内容如 include<，操作方法如下：  
 
-    将光标移到开始插入的位置，按CTRL+V进入VISUAL模式，选择好模块后按I（shift+i)，后插入要插入的文本，按[ESC]完成  
+    将光标移到开始插入的位置，按 CTRL+V 进入 VISUAL 模式，选择好模块后按 I（shift+i)，后插入要插入的文本，按[ESC]完成  
 
 行方式命令：  
 
-    ：n1,n2 co n3：将n1行到n2行之间的内容拷贝到第n3行下  
+    ：n1,n2 co n3：将 n1 行到 n2 行之间的内容拷贝到第 n3 行下  
 
-    ：n1,n2 m n3：将n1行到n2行之间的内容移至到第n3行下  
+    ：n1,n2 m n3：将 n1 行到 n2 行之间的内容移至到第 n3 行下  
 
-    ：n1,n2 d ：将n1行到n2行之间的内容删除  
+    ：n1,n2 d ：将 n1 行到 n2 行之间的内容删除  
 
-    ：n1,n2 w!command：将文件中n1行至n2行的内容作为command的输入并执行之  
+    ：n1,n2 w!command：将文件中 n1 行至 n2 行的内容作为 command 的输入并执行之  
 
-            若不指定n1，n2，则表示将整个文件内容作为command的输入  
+            若不指定 n1，n2，则表示将整个文件内容作为 command 的输入  
 
 宏：  
 
-    q[a-z]：开始记录但前开始的操作为宏，名称可为【a-z】，然后用q终止录制宏  
+    q[a-z]：开始记录但前开始的操作为宏，名称可为【a-z】，然后用 q终止录制宏  
 
     reg：显示当前定义的所有的宏，用@[a-z]来在当前光标处执行宏[a-z]  
 
@@ -346,21 +344,21 @@ visual 模式：
 
     :split:分割一个窗口  
 
-    :split file.c ：为另一个文件file.c分隔窗口  
+    :split file.c ：为另一个文件 file.c 分隔窗口  
 
-    :nsplit file.c： 为另一个文件file.c分隔窗口，并指定其行数  
+    :nsplit file.c： 为另一个文件 file.c 分隔窗口，并指定其行数  
 
-    ctrl＋w在窗口中切换  
+    ctrl＋w 在窗口中切换  
 
     :close：关闭当前窗口  
 
 文件及其他：  
 
-    ：q：退出vi  
+    ：q：退出 vi  
 
-    ：q!：不保存文件并退出vi  
+    ：q!：不保存文件并退出 vi  
 
-    ：e filename：打开文件filename进行编辑  
+    ：e filename：打开文件 filename 进行编辑  
 
     ：e! :放弃修改文件内容，重新载入该文件编辑  
 
@@ -368,25 +366,25 @@ visual 模式：
 
     ：wq ：存盘退出  
 
-    ：ZZ：保存当前文档并退出VIM  
+    ：ZZ：保存当前文档并退出 VIM  
 
-    ：!command：执行shell命令command  
+    ：!command：执行 shell 命令 command  
 
-    ：r!command：将命令command的输出结果放到当前行  
+    ：r!command：将命令 command 的输出结果放到当前行  
 
-    :n1,n2 write temp.c 将本文件中的n1,到n2行写入temp.c这个文件中去  
+    :n1,n2 write temp.c 将本文件中的 n1,到 n2 行写入 temp.c 这个文件中去  
 
-    :read file.c 将文件file.c的内容插入到当前光标所在的下面  
+    :read file.c 将文件 file.c 的内容插入到当前光标所在的下面  
 
-    :0read file.c 将文件file.c的内容插入到当前文件的开始处(第0行）  
+    :0read file.c 将文件 file.c 的内容插入到当前文件的开始处(第 0行）  
 
-    :nread file.c 将文件file.c的内容插入到当前文件的第n行后面  
+    :nread file.c 将文件 file.c 的内容插入到当前文件的第 n行后面  
 
-    :read !cmd :将外部命令cmd的输出插如到当前光标所在的下面  
+    :read !cmd :将外部命令 cmd 的输出插如到当前光标所在的下面  
 
 帮助：  
 
-    :help ：查看帮助文档，在这之中，按CTRL+] 进入超连接，按CTRL＋O 返回。  
+    :help ：查看帮助文档，在这之中，按 CTRL+] 进入超连接，按 CTRL＋O 返回。  
 
     :help subject :看某一主题的帮助，ZZ 退出帮助  
 
@@ -400,12 +398,12 @@ visual 模式：
 
     :au GUIEnter * simalt ~x   启动时最大化
 ** vim 中文乱码修改 
-在vimrc中
+在 vimrc 中
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
 ** vimrc 设置 
-在vimrc中
+在 vimrc 中
 set nocompatible " 关闭 vi 兼容模式
 syntax on " 自动语法高亮
 colorscheme molokai " 设定配色方案
@@ -464,7 +462,7 @@ elseif MySys() == "linux"
 let $VIMFILES = $HOME.'/.vim'
 endif
 
-" 设定doc文档目录
+" 设定 doc 文档目录
 let helptags=$VIMFILES.'/doc'
 
 " 设置字体 以及中文支持
@@ -493,15 +491,15 @@ else
 echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
 endif
 
-" Buffers操作快捷方式!
+" Buffers 操作快捷方式!
 nnoremap <C-RETURN> :bnext<CR>
 nnoremap <C-S-RETURN> :bprevious<CR>
 
-" Tab操作快捷方式!
+" Tab 操作快捷方式!
 nnoremap <C-TAB> :tabnext<CR>
 nnoremap <C-S-TAB> :tabprev<CR>
 
-"关于tab的快捷键
+"关于 tab 的快捷键
 " map tn :tabnext<cr>
 " map tp :tabprevious<cr>
 " map td :tabnew .<cr>
@@ -544,9 +542,9 @@ autocmd FileType python map <F12> :!python %<CR>
 " 选中状态下 Ctrl+c 复制
 vmap <C-c> "+y
 
-" 打开javascript折叠
+" 打开 javascript 折叠
 let b:javascript_fold=1
-" 打开javascript对dom、html和css的支持
+" 打开 javascript 对dom、html 和css 的支持
 let javascript_enable_domhtmlcss=1
 " 设置字典 ~/.vim/dict/文件的路径
 autocmd filetype javascript set dictionary=$VIMFILES/dict/javascript.dict
@@ -554,25 +552,25 @@ autocmd filetype css set dictionary=$VIMFILES/dict/css.dict
 autocmd filetype php set dictionary=$VIMFILES/dict/php.dict
 
 "-----------------------------------------------------------------
-" plugin - bufexplorer.vim Buffers切换
+" plugin - bufexplorer.vim Buffers 切换
 " \be 全屏方式查看全部打开的文件列表
 " \bv 左右方式查看 \bs 上下方式查看
 "-----------------------------------------------------------------
 
 
 "-----------------------------------------------------------------
-" plugin - taglist.vim 查看函数列表，需要ctags程序
-" F4 打开隐藏taglist窗口
+" plugin - taglist.vim 查看函数列表，需要 ctags 程序
+" F4 打开隐藏 taglist 窗口
 "-----------------------------------------------------------------
-if MySys() == "windows" " 设定windows系统中ctags程序的位置
+if MySys() == "windows" " 设定 windows 系统中 ctags 程序的位置
 let Tlist_Ctags_Cmd = '"'.$VIMRUNTIME.'/ctags.exe"'
-elseif MySys() == "linux" " 设定windows系统中ctags程序的位置
+elseif MySys() == "linux" " 设定 windows 系统中 ctags 程序的位置
 let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 endif
 nnoremap <silent><F4> :TlistToggle<CR>
-let Tlist_Show_One_File = 1 " 不同时显示多个文件的tag，只显示当前文件的
-let Tlist_Exit_OnlyWindow = 1 " 如果taglist窗口是最后一个窗口，则退出vim
-let Tlist_Use_Right_Window = 1 " 在右侧窗口中显示taglist窗口
+let Tlist_Show_One_File = 1 " 不同时显示多个文件的 tag，只显示当前文件的
+let Tlist_Exit_OnlyWindow = 1 " 如果 taglist 窗口是最后一个窗口，则退出 vim
+let Tlist_Use_Right_Window = 1 " 在右侧窗口中显示 taglist 窗口
 let Tlist_File_Fold_Auto_Close=1 " 自动折叠当前非编辑文件的方法列表
 let Tlist_Auto_Open = 0
 let Tlist_Auto_Update = 1
@@ -582,16 +580,16 @@ let Tlist_Process_File_Always = 1
 let Tlist_Display_Prototype = 0
 let Tlist_Compact_Format = 1
 "-----------------------------------------------------------------
-" plugin - mark.vim 给各种tags标记不同的颜色，便于观看调式的插件。
+" plugin - mark.vim 给各种 tags 标记不同的颜色，便于观看调式的插件。
 " \m mark or unmark the word under (or before) the cursor
 " \r manually input a regular expression. 用于搜索.
 " \n clear this mark (i.e. the mark under the cursor), or clear all highlighted marks .
-" \* 当前MarkWord的下一个 \# 当前MarkWord的上一个
-" \/ 所有MarkWords的下一个 \? 所有MarkWords的上一个
+" \* 当前 MarkWord 的下一个 \# 当前 MarkWord 的上一个
+" \/ 所有 MarkWords 的下一个 \? 所有 MarkWords 的上一个
 "-----------------------------------------------------------------
 "-----------------------------------------------------------------
 " plugin - NERD_tree.vim 以树状方式浏览系统中的文件和目录
-" :ERDtree 打开NERD_tree :NERDtreeClose 关闭NERD_tree
+" :ERDtree 打开 NERD_tree :NERDtreeClose 关闭 NERD_tree
 " o 打开关闭文件或者目录 t 在标签页中打开
 " T 在后台标签页中打开 ! 执行此文件
 " p 到上层目录 P 到根目录
@@ -604,11 +602,11 @@ map <F3> :NERDTreeToggle<CR>
 imap <F3> <ESC>:NERDTreeToggle<CR>
 "-----------------------------------------------------------------
 " plugin - NERD_commenter.vim 注释代码用的，
-" [count],cc 光标以下count行逐行添加注释(7,cc)
-" [count],cu 光标以下count行逐行取消注释(7,cu)
-" [count],cm 光标以下count行尝试添加块注释(7,cm)
+" [count],cc 光标以下 count 行逐行添加注释(7,cc)
+" [count],cu 光标以下 count 行逐行取消注释(7,cu)
+" [count],cm 光标以下 count 行尝试添加块注释(7,cm)
 " ,cA 在行尾插入 /* */,并且进入插入模式。 这个命令方便写注释。
-" 注：count参数可选，无则默认为选中行或当前行
+" 注：count 参数可选，无则默认为选中行或当前行
 "-----------------------------------------------------------------
 let NERDSpaceDelims=1 " 让注释符与语句之间留一个空格
 let NERDCompactSexyComs=1 " 多行注释时样子更好看
@@ -622,12 +620,12 @@ map <leader>df :Dox<CR>
 map <leader>db :DoxBlock<CR>
 map <leader>dc a /* */<LEFT><LEFT><LEFT>
 "-----------------------------------------------------------------
-" plugin – ZenCoding.vim 很酷的插件，HTML代码生成
+" plugin – ZenCoding.vim 很酷的插件，HTML 代码生成
 " 插件最新版：http://github.com/mattn/zencoding-vim
 " 常用命令可看：http://nootn.com/blog/Tool/23/
 "-----------------------------------------------------------------
 "-----------------------------------------------------------------
-" plugin – checksyntax.vim JavaScript常见语法错误检查
+" plugin – checksyntax.vim JavaScript 常见语法错误检查
 " 默认快捷方式为 F5
 "-----------------------------------------------------------------
 let g:checksyntax_auto = 0 " 不自动检查
@@ -656,9 +654,54 @@ smap <silent> <C-e> <Plug>(neocomplcache_snippets_expand)
 "-----------------------------------------------------------------
 "-----------------------------------------------------------------
 " plugin - vcscommand.vim 对%命令进行扩展使得能在嵌套标签和语句之间跳转
-" SVN/git管理工具
+" SVN/git 管理工具
 "-----------------------------------------------------------------
 "-----------------------------------------------------------------
 " plugin – a.vim
 "-----------------------------------------------------------------
- 
+* 百度网盘 
+  第三方微博登录
+  账号：17886230016 
+  密码：wh958142
+* VPN
+Dear qiu duan,
+
+PLEASE PRINT THIS MESSAGE FOR YOUR RECORDS - PLEASE READ THIS EMAIL IN FULL.
+
+We are pleased to tell you that the server you ordered has now been set up and is operational.
+
+Note: IF YOU ORDERED ANY PRODUCT ADDONS DURING YOUR ORDER, YOU MUST OPEN A SUPPORT TICKET FOR THE ADDONS TO BE ACTIVATED.
+
+SERVICE DETAILS:
+
+====================
+VPS Login Details
+====================
+
+VPS Package: 1GB Linux VPS
+Hostname: www.duanqiu0716.com
+IP Address: 155.254.32.192
+
+====================
+VPS Control Panel
+====================
+
+Panel URL (https): https://vpscp.alpharacks.com:5656/
+Username: vmuser28554
+Password: df3ca6844f
+
+====================
+SSH Access Information
+====================
+
+Main IP: 155.254.32.192
+Username: root
+Password: df3ca6844f
+Listen Port: 22
+
+You can access your server using a free simple SSH client program called Putty located at: http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe
+
+Support
+=============================
+For any support needs, please open
+

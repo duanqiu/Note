@@ -1,0 +1,6 @@
+#+TITLE This Document is Record of My paper
+* Extreml Reslution Video Recognition
+核心点：先训练一个高分辨率的网络 然后使用 Gan 来辅助低分辨率网络进行训练
+
+
+

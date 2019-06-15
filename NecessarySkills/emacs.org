@@ -5,11 +5,11 @@
 ** 快捷键
 - C-e，回车 向下新插入一行(这就是将光标移到结尾然后插入  enter)
 - C-c C-x C-v 显示图片
-
+- C-u - 向上翻页
+- C-d - 向上翻页
 [[file:Picture/emacs1.png]]
 [[file:Picture/emacs2.png]]
 [[file:Picture/emacs3.png]]
-
 
 ** magit
     - 添加文件 先创建并修改 然后在  magit-status 里面按  s 键 加入  track
